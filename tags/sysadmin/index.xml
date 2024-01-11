@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sysadmin on Marcelo Freri</title>
-    <link>https://mfreri.com/tags/sysadmin/</link>
+    <link>https://mfreri.github.io/web/tags/sysadmin/</link>
     <description>Recent content in sysadmin on Marcelo Freri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2023</copyright>
-    <lastBuildDate>Wed, 22 Mar 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.github.io/web/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logs en Linux</title>
-      <link>https://mfreri.com/blog/2023-03-22-logs-en-linux/</link>
+      <link>https://mfreri.github.io/web/blog/2023-03-22-logs-en-linux/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.com/blog/2023-03-22-logs-en-linux/</guid>
+      <guid>https://mfreri.github.io/web/blog/2023-03-22-logs-en-linux/</guid>
       <description>También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
 En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.
 EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.</description>

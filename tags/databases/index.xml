@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>databases on Marcelo Freri</title>
+    <link>https://mfreri.com/tags/databases/</link>
+    <description>Recent content in databases on Marcelo Freri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>Copyright © Marcelo Freri 2023</copyright>
+    <lastBuildDate>Fri, 03 Mar 2023 15:10:22 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducción a las Bases de Datos</title>
+      <link>https://mfreri.com/blog/2023-03-03-bases-de-datos/</link>
+      <pubDate>Fri, 03 Mar 2023 15:10:22 -0300</pubDate>
+      
+      <guid>https://mfreri.com/blog/2023-03-03-bases-de-datos/</guid>
+      <description>Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+A continuación realizaremos un introducción al mundo de las bases de datos, para que puedas tener una idea general de para qué y cómo se utilizan en el ámbito informático.</description>
+    </item>
+    
+  </channel>
+</rss>

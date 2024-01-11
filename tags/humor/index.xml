@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>humor on Marcelo Freri</title>
+    <link>https://mfreri.com/tags/humor/</link>
+    <description>Recent content in humor on Marcelo Freri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>Copyright © Marcelo Freri 2023</copyright>
+    <lastBuildDate>Wed, 20 Sep 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/humor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>¿Qué es un Administrador de Sistemas?</title>
+      <link>https://mfreri.com/blog/2023-09-20-sysadmin/</link>
+      <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
+      
+      <guid>https://mfreri.com/blog/2023-09-20-sysadmin/</guid>
+      <description>En los sagrados salones del reino digital, donde los servidores zumban como antiguos monolitos y los cables de red pulsan vivos de datos, se encuentra un guardián del reino digital: el administrador del sistema. Este noble caballero, vestido no con una armadura sino con los códigos y órdenes de lo arcano, ejerce poderes invisibles para el ojo del profano.
+Con sólo presionar unas teclas, podemos invocar la esencia misma del orden en el caótico torbellino del cosmos digital.</description>
+    </item>
+    
+  </channel>
+</rss>

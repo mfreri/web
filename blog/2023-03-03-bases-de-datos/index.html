@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QCZ9LYZBKV');
+  </script>
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Introducción a las Bases de Datos | Marcelo Freri</title>
+  <meta name="author" content="Marcelo Freri">
+  <meta name="description" content="Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+A continuación realizaremos un introducción al mundo de las bases de datos, para que puedas tener una idea general de para qué y cómo se utilizan en el ámbito informático.">
+  <meta name="keywords" content='blog,developer,sysadmin,marcelo,freri,español,uruguay,linux,asesor'>
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Introducción a las Bases de Datos"/>
+<meta name="twitter:description" content="Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+A continuación realizaremos un introducción al mundo de las bases de datos, para que puedas tener una idea general de para qué y cómo se utilizan en el ámbito informático."/>
+
+  <meta property="og:title" content="Introducción a las Bases de Datos" />
+<meta property="og:description" content="Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+A continuación realizaremos un introducción al mundo de las bases de datos, para que puedas tener una idea general de para qué y cómo se utilizan en el ámbito informático." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mfreri.com/blog/2023-03-03-bases-de-datos/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-03-03T15:10:22-03:00" />
+<meta property="article:modified_time" content="2023-03-03T15:10:22-03:00" />
+
+  <link rel="stylesheet" href='/css/bootstrap.min.css'  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/mystyle.min.css">
+  <script src=/js/lazysizes.min.js></script>
+
+  
+    <link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png'>
+    <link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png'>
+    <link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png'>
+    <link rel="manifest" href='/site.webmanifest'>
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top ">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mfreri.com">Marcelo Freri</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Inicio">Inicio</a></li>
+          
+          <li><a href="/products/" title="Servicios">Servicios</a></li>
+          
+          <li><a href="/archive/" title="Blog">Blog</a></li>
+          
+          <li><a href="/about/" title="¿Quién soy?">¿Quién soy?</a></li>
+          
+          <li><a href="/contact/" title="Contacto">Contacto</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="Buscar...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('/img/filer.jpg');
+  }
+</style>
+
+<header class="intro-header ">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/databases/" title="databases">databases</a>
+            
+          </div>
+          <h1>Introducción a las Bases de Datos</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Publicado por  Marcelo Freri 
+            el 3/3/2023
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de <em>streaming</em> favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.</p>
+<p>A continuación realizaremos un introducción al mundo de las bases de datos, para que puedas tener una idea general de para qué y cómo se utilizan en el ámbito informático.</p>
+<h2 id="qué-es-una-base-de-datos">¿Qué es una Base de Datos?<a class="anchorjs-link" href="#qu%c3%a9-es-una-base-de-datos"></a></h2><p>Una base de datos es una estructura que permite el almacenamiento de información, de manera ordenada y metódica, y que agiliza luego su consulta.</p>
+<h2 id="componentes-de-una-base-de-datos">Componentes de una Base de Datos<a class="anchorjs-link" href="#componentes-de-una-base-de-datos"></a></h2><p>Algunos de los componentes principales de una base de datos son:</p>
+<ul>
+<li>Tablas</li>
+<li>Índices</li>
+<li>Reportes</li>
+</ul>
+<h3 id="tablas">Tablas<a class="anchorjs-link" href="#tablas"></a></h3><p>Las tablas son el corazón de la base de datos, pues en ellas se almacena el grueso de la información. Piensa en ellas como en hojas de una planilla electrónica con largas listas de datos tabulados.</p>
+<p>Un ejemplo práctico de una tabla, sería la lista de contactos de tu teléfono móvil.</p>
+<p>Internamente, una tabla se organiza en campos y registros.</p>
+<h4 id="campos">Campos<a class="anchorjs-link" href="#campos"></a></h4><p>Es lo que la da orden a la información volcada en una tabla, etiquetando y dando formato a cada dato almacenado.</p>
+<p>Volviendo al ejemplo de la agenda de contactos del móvil, los campos serían <em>nombre</em>, <em>apellido</em>, <em>teléfono</em>, etcétera.</p>
+<p>Un campo determina qué dato se va a almacenar en él y también su tipo. Si es texto, número o fecha lo determina el tipo de campo. Estos que nombré no son los únicos tipos que hay, existen muchos más.</p>
+<h4 id="registros">Registros<a class="anchorjs-link" href="#registros"></a></h4><p>Si los campos determinan la información que se va a contener dentro de una tabla, los registros son la información en sí.</p>
+<p>En el ejemplo de la agenda de contactos cada contacto, con sus datos asociados, correspondería a un registro de la tabla. En una tabla pueden existir millones de registros.</p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="https://mfreri.com
+/img/2023-03-03-bases-de-datos/image02.jpg" data-action="zoom" alt="Ejemplo de una tabla"  class="lazyload">
+  </a>
+  
+</figure>
+Ejemplo de una tabla.</p>
+<h3 id="índices">Índices<a class="anchorjs-link" href="#%c3%adndices"></a></h3><p>Un índice es método usado para agilizar el acceso a la información de una tabla. Básicamente son como tablas auxiliares que contienen una copia de los campos más utilizados de una tabla.</p>
+<p>El administrador de la base de datos (DBA por sus siglas en inglés) debe determinar cuáles son los campos más accedidos y crear índices sobre esos campos. Al tratar con un menor volumen de datos, las consultas se realizan en mucho menor tiempo si se accede a través de índices.</p>
+<p>Para un usuario los índices son una herramienta completamente transparente. Desde su punto de vista, sólo debe acceder a la información, sin importar si lo hace mediante un índice o directamente sobre la tabla, ya que es tarea del DBA definirlos según estime necesario.</p>
+<h3 id="reportes">Reportes<a class="anchorjs-link" href="#reportes"></a></h3><p>Como su nombre lo indica, un reporte es un informe que se arma utilizando la información contenida en la base de datos. Por lo general, un reporte suele utilizar datos de varias tablas para armar un informe.</p>
+<h2 id="qué-es-una-base-de-datos-relacional">¿Qué es una Base de Datos Relacional?<a class="anchorjs-link" href="#qu%c3%a9-es-una-base-de-datos-relacional"></a></h2><p>La tabla de contactos no es la única tabla que compone la agenda de tu móvil. Por ejemplo, hay una tabla que registra las llamadas ocurridas. Esta tabla probablemente contenga campos con la fecha de la llamada, el número de teléfono, si se produjo la conexión o si fue una perdida. Esta tabla está relacionada con la tabla de contactos, posiblemente por el número de teléfono. Es por esto que puedes ver el nombre del contacto que te llama.</p>
+<p>Esta forma de conectar un registro de una tabla con uno o varios registros de otra es lo que denominamos una relación. Entonces, una base de datos cuyas tablas tienen relaciones definidas entre ellas es una base de datos relacional.</p>
+<p>En la práctica, casi todas las bases de datos que se usan en la actualidad en informática son relacionales.</p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="https://mfreri.com
+/img/2023-03-03-bases-de-datos/image03.jpg" data-action="zoom" alt="Relación entre dos tablas"  class="lazyload">
+  </a>
+  
+</figure>
+Ejemplo de una relación entre dos tablas.</p>
+<p>En el ejemplo de la imagen, las columnas corresponden a los campos y las filas de datos a los registros. La flecha indica que existe una relación entre los campos <em>teléfono</em> de cada tabla.</p>
+<h3 id="claves-primarias-y-secundarias">Claves Primarias y Secundarias<a class="anchorjs-link" href="#claves-primarias-y-secundarias"></a></h3><p>Un componente omnipresente en las bases de datos relacionales son las <strong>claves</strong>. Se trata de campos que se utilizan para relacionar tablas entre sí.</p>
+<p>En el ejemplo de la agenda telefónica, el campo <em>teléfono</em> sería la <strong>clave</strong>, pues sirve para relacionar entre ellas la tabla de contactos y la de llamadas.</p>
+<p>Una <strong>clave primaria</strong> es la que identifica un único registro en toda la tabla, es decir, no pueden haber más registros que tengan la misma clave. En el caso de los contactos, el campo <em>teléfono</em> sería una clave primaria.</p>
+<blockquote>
+<p>Que el campo <em>teléfono</em> sea una <strong>clave primaria</strong> es a modo de ejemplo, ya que en la realidad es posible tener dos o más contactos con el mismo número telefónico. Por ahora, sígueme la corriente.</p>
+</blockquote>
+<p>En el caso de la tabla de llamadas, el campo <em>teléfono</em> puede aparecer varias veces, sin embargo sigue sirviendo para relacionar esta tabla con la de contactos. En esta oportunidad hablamos de una <strong>clave secundaria</strong>; una clave que se usa para relacionar tablas pero que no es única.</p>
+<p>Como se desprende de todo esto, las relaciones pueden ser de una a una o de una a muchas; esto dependerá de si un registro tiene un único registro equivalente en otra tabla o si, por el contrario, tiene más de uno.</p>
+<h2 id="sistemas-gestores-de-base-de-datos">Sistemas Gestores de Base de Datos<a class="anchorjs-link" href="#sistemas-gestores-de-base-de-datos"></a></h2><p>Cuando una aplicación accede a una base de datos, no lo hace directamente sobre los archivos que la componen, sino que envía o solicita la información a través de un programa que se encuentra en el servidor de bases de datos. Este software se llama Sistema Gestor de Bases de Datos y permite realizar todo tipo de tareas sobre una o varias bases de datos y sus componentes (creación, acceso, modificación, etc). Además, debe encargarse de la integridad y consistencia de la información tratada.</p>
+<p>Cuando accedes a unos datos que están indexados, es el gestor de bases de datos quien se encarga de utilizar el índice adecuado. También se encarga de mantenerlos actualizados cuando se agrega, modifica o elimina algún registro.</p>
+<p>Otra tarea importante que realizan los gestores es encargarse de controlar los accesos a los datos a través de políticas de usuario. Los DBA deben definir la seguridad de la base de datos en función de las tareas que realiza cada usuario, luego el sistema se encargará de gestionar los permisos.</p>
+<p>Como último punto, pero no menos importante, los sistemas gestores de bases de datos suelen ser utilizados para realizar los respaldos de las bases de datos que manejan.</p>
+<p>Algunos de los gestores de bases de datos más utilizados son los siguientes:</p>
+<ul>
+<li>Oracle</li>
+<li>MySQL</li>
+<li>MS SQL</li>
+<li>PostgreSQL</li>
+</ul>
+<h2 id="sql">SQL<a class="anchorjs-link" href="#sql"></a></h2><p>Como habrás observado, muchos gestores de bases de datos llevan <em>SQL</em> en su nombre. Esto tiene un motivo, además de la falta de imaginación, y es el hecho de que soportan el <strong>Lenguaje Estructurado de Consultas</strong> (Structured Query Language), abreviado <strong>SQL</strong>.</p>
+<p>Se trata de un lenguaje diseñado para la interacción con bases de datos. No es el propósito de este artículo enseñarte SQL, pero vamos a mirar un ejemplo rápido.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span># Creo la base de datos
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>CREATE DATABASE pruebas;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span># Abro la base de datos
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>USE pruebas;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span># Creo una tabla llamada &#34;usuarios&#34; con campos &#34;id&#34;, &#34;usuario&#34;, &#34;nombre&#34; y &#34;activo&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>CREATE TABLE usuarios (id INT NOT NULL AUTO_INCREMENT, usuario VARCHAR(20) NOT NULL, nombre VARCHAR(45) NOT NULL, activo BOOL NOT NULL DEFAULT True, PRIMARY KEY (id));
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span># Agrego datos a la tabla &#34;usuarios&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>INSERT INTO usuarios (usuario, nombre) VALUES (&#34;jfernandez&#34;, &#34;Juana Fernández&#34;);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>INSERT INTO usuarios (usuario, nombre) VALUES (&#34;jrodo&#34;, &#34;José Rodó&#34;);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>INSERT INTO usuarios (usuario, nombre) VALUES (&#34;pfigari&#34;, &#34;Pedro Figari&#34;);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>INSERT INTO usuarios (usuario, nombre) VALUES (&#34;dagustini&#34;, &#34;Delmira Agustini&#34;);
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span># Modifico un campo de un registro de la tabla
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>UPDATE usuarios SET activo=False WHERE usuario=&#34;pfigari&#34;;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span># Muestro todos los datos de la tabla &#34;usuarios&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>SELECT * FROM usuarios;
+</span></span></code></pre></div><p>En SQL los comandos se escriben en mayúsculas y los parámetros en minúsculas. Esto es una antigua convención, aunque la mayoría de los gestores modernos ya aceptan minúsculas para los comandos.</p>
+<h2 id="conclusión">Conclusión<a class="anchorjs-link" href="#conclusi%c3%b3n"></a></h2><p>Las bases de datos están presentes en la mayoría de los ámbitos que requieran el procesamiento de grandes volúmenes de información. Están compuesta por varios elementos, destacándose principalmente las tablas e índices.</p>
+<p>Un sistema gestor de base de datos es un software que se encarga de administrar las bases de datos, asegurando integridad en el manejo de la información, manteniendo los índices actualizados y controlando los permisos de los usuarios, entre otras tareas.</p>
+<p>SQL es un lenguaje que permite comunicarse con el gestor de bases de datos para realizar consultas y modificaciones.</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/blog/2023-03-22-logs-en-linux/" data-toggle="tooltip" data-placement="top" title="Logs en Linux">
+              Siguiente<br>
+              <span>Logs en Linux</span>
+            </a>
+          </li>
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>ETIQUETAS PRINCIPALES</h5>
+  <div class="tags">
+    
+    <a href="/tags/databases/">databases</a>
+    
+    <a href="/tags/featured/">featured</a>
+    
+    <a href="/tags/humor/">humor</a>
+    
+    <a href="/tags/linux/">linux</a>
+    
+    <a href="/tags/sysadmin/">sysadmin</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+
+<li>
+  <a href="https://codeberg.org/mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://pixelfed.social/i/web/profile/499625507351759099" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://mastodon.social/@mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          Copyright © Marcelo Freri 2023  
+          <br>
+          Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://linux.org/" target="_blank">Linux</a>
+          <br>
+          Themed by <a href="https://github.com/roninro/hugo-theme-puppet/" target="_blank">Puppet</a>
+          <br>
+          <a href="https://mfreri.com/privacy/">Política de Privacidad</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QCZ9LYZBKV', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>

@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Marcelo Freri</title>
-    <link>https://mfreri.github.io/web/tags/</link>
+    <link>https://mfreri.com/tags/</link>
     <description>Recent content in Tags on Marcelo Freri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2024</copyright>
-    <lastBuildDate>Wed, 20 Sep 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.github.io/web/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Sep 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>featured</title>
-      <link>https://mfreri.github.io/web/tags/featured/</link>
+      <link>https://mfreri.com/tags/featured/</link>
       <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/tags/featured/</guid>
+      <guid>https://mfreri.com/tags/featured/</guid>
       <description></description>
     </item>
     
     <item>
       <title>humor</title>
-      <link>https://mfreri.github.io/web/tags/humor/</link>
+      <link>https://mfreri.com/tags/humor/</link>
       <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/tags/humor/</guid>
+      <guid>https://mfreri.com/tags/humor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://mfreri.github.io/web/tags/linux/</link>
+      <link>https://mfreri.com/tags/linux/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/tags/linux/</guid>
+      <guid>https://mfreri.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sysadmin</title>
-      <link>https://mfreri.github.io/web/tags/sysadmin/</link>
+      <link>https://mfreri.com/tags/sysadmin/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/tags/sysadmin/</guid>
+      <guid>https://mfreri.com/tags/sysadmin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>databases</title>
-      <link>https://mfreri.github.io/web/tags/databases/</link>
+      <link>https://mfreri.com/tags/databases/</link>
       <pubDate>Fri, 03 Mar 2023 15:10:22 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/tags/databases/</guid>
+      <guid>https://mfreri.com/tags/databases/</guid>
       <description></description>
     </item>
     

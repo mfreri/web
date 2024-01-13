@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contacto on Marcelo Freri</title>
-    <link>https://mfreri.github.io/web/contact/</link>
+    <link>https://mfreri.com/contact/</link>
     <description>Recent content in Contacto on Marcelo Freri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>Copyright © Marcelo Freri 2024</copyright><atom:link href="https://mfreri.github.io/web/contact/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © Marcelo Freri 2024</copyright><atom:link href="https://mfreri.com/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

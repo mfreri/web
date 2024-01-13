@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mfreri@web on Marcelo Freri</title>
-    <link>https://mfreri.github.io/web/</link>
+    <link>https://mfreri.com/</link>
     <description>Recent content in mfreri@web on Marcelo Freri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2024</copyright>
-    <lastBuildDate>Wed, 20 Sep 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Sep 2023 15:14:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿Qué es un Administrador de Sistemas?</title>
-      <link>https://mfreri.github.io/web/blog/2023-09-20-sysadmin/</link>
+      <link>https://mfreri.com/blog/2023-09-20-sysadmin/</link>
       <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/blog/2023-09-20-sysadmin/</guid>
+      <guid>https://mfreri.com/blog/2023-09-20-sysadmin/</guid>
       <description>En los sagrados salones del reino digital, donde los servidores zumban como antiguos monolitos y los cables de red pulsan vivos de datos, se encuentra un guardián del reino digital: el administrador del sistema. Este noble caballero, vestido no con una armadura sino con los códigos y órdenes de lo arcano, ejerce poderes invisibles para el ojo del profano.
 Con sólo presionar unas teclas, podemos invocar la esencia misma del orden en el caótico torbellino del cosmos digital.</description>
     </item>
     
     <item>
       <title>Logs en Linux</title>
-      <link>https://mfreri.github.io/web/blog/2023-03-22-logs-en-linux/</link>
+      <link>https://mfreri.com/blog/2023-03-22-logs-en-linux/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/blog/2023-03-22-logs-en-linux/</guid>
+      <guid>https://mfreri.com/blog/2023-03-22-logs-en-linux/</guid>
       <description>También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
 En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.
 EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.</description>
@@ -31,10 +31,10 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
     
     <item>
       <title>Introducción a las Bases de Datos</title>
-      <link>https://mfreri.github.io/web/blog/2023-03-03-bases-de-datos/</link>
+      <link>https://mfreri.com/blog/2023-03-03-bases-de-datos/</link>
       <pubDate>Fri, 03 Mar 2023 15:10:22 -0300</pubDate>
       
-      <guid>https://mfreri.github.io/web/blog/2023-03-03-bases-de-datos/</guid>
+      <guid>https://mfreri.com/blog/2023-03-03-bases-de-datos/</guid>
       <description>Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
 A continuación realizaremos un introducción al mundo de las bases de datos, para que puedas tener una idea general de para qué y cómo se utilizan en el ámbito informático.</description>
     </item>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QCZ9LYZBKV');
+  </script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Ansible - Primer Contacto | Marcelo Freri</title>
+  <meta name="author" content="Marcelo Freri">
+  <meta name="description" content="Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.
+¿Qué Es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran.">
+  <meta name="keywords" content='blog,developer,sysadmin,marcelo,freri,español,uruguay,linux,asesor'>
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ansible - Primer Contacto"/>
+<meta name="twitter:description" content="Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.
+¿Qué Es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran."/>
+
+  <meta property="og:title" content="Ansible - Primer Contacto" />
+<meta property="og:description" content="Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.
+¿Qué Es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mfreri.com/blog/2023-02-03-ansible/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-03T15:10:22-03:00" />
+<meta property="article:modified_time" content="2023-02-03T15:10:22-03:00" />
+
+  <link rel="stylesheet" href='/css/bootstrap.min.css'  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/mystyle.min.css">
+  <script src=/js/lazysizes.min.js></script>
+
+  
+    <link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png'>
+    <link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png'>
+    <link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png'>
+    <link rel="manifest" href='/site.webmanifest'>
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top ">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mfreri.com">Marcelo Freri</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Inicio">Inicio</a></li>
+          
+          <li><a href="/products/" title="Servicios">Servicios</a></li>
+          
+          <li><a href="/archive/" title="Blog">Blog</a></li>
+          
+          <li><a href="/about/" title="¿Quién soy?">¿Quién soy?</a></li>
+          
+          <li><a href="/contact/" title="Contacto">Contacto</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="Buscar...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('/img/2023-02-03-ansible/ansible.jpg');
+  }
+</style>
+
+<header class="intro-header ">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/sysadmin/" title="sysadmin">sysadmin</a>
+            
+          </div>
+          <h1>Ansible - Primer Contacto</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Publicado por  Marcelo Freri 
+            el 3/2/2023
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.</p>
+<h2 id="qué-es-ansible">¿Qué Es Ansible?<a class="anchorjs-link" href="#qu%c3%a9-es-ansible"></a></h2><p>Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran.</p>
+<h2 id="características">Características<a class="anchorjs-link" href="#caracter%c3%adsticas"></a></h2><ul>
+<li>Ansible no necesita instalar clientes ya que usa las características propias de Linux.</li>
+<li>Utiliza OpenSSH para conectarse a los hosts, lo que mejora la seguridad y solidez de los procesos.</li>
+<li>No depende de un servidor central, por lo que se puede manejar desde cualquier equipo de la red, en tanto cuente con las credenciales y los <em>playbooks</em>.</li>
+<li>Trabaja con módulos que realizan acciones específicas.</li>
+<li>Es de código abierto.</li>
+</ul>
+<h2 id="instalación">Instalación<a class="anchorjs-link" href="#instalaci%c3%b3n"></a></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ sudo apt install ansible ansible-core
+</span></span></code></pre></div><h2 id="guía-de-uso">Guía De Uso<a class="anchorjs-link" href="#gu%c3%ada-de-uso"></a></h2><p>Ansible funciona con dos grupos de archivos a tener en cuenta: los inventarios de equipos y los <em>playbooks</em>.</p>
+<h3 id="inventario-de-equipos">Inventario De Equipos<a class="anchorjs-link" href="#inventario-de-equipos"></a></h3><p>Son archivos que contienen una lista de equipos de la red. Su formato es el siguiente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[nombre_grupo]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>nombre_host ansible_host=dirección_ip
+</span></span></code></pre></div><h4 id="ejemplo-de-inventario">Ejemplo de inventario<a class="anchorjs-link" href="#ejemplo-de-inventario"></a></h4><p>Definir un grupo de servidores de archivos llamado <em>samba</em>, que incluya el servidor de <em>contabilidad</em> y el de <em>sueldos</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[samba]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>contabilidad ansible_host=192.168.1.101
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>sueldos ansible_host=192.168.1.113
+</span></span></code></pre></div><h4 id="variables">Variables<a class="anchorjs-link" href="#variables"></a></h4><p>Soportan el uso de variables, pero estas deben ser definidas en un subgrupo. En este ejemplo, las variables sólo aplicarán para el grupo <em>samba</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[samba:vars]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ansible_user=mi_usuario
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ansible_password=mi_clave_segura
+</span></span></code></pre></div><h3 id="playbooks">Playbooks<a class="anchorjs-link" href="#playbooks"></a></h3><p>Son archivos en formato <em>YAML</em> y contienen la lista de tareas a realizar en los hosts.</p>
+<h4 id="formato-básico">Formato Básico<a class="anchorjs-link" href="#formato-b%c3%a1sico"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>- name: Descripción corta de las tareas
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  hosts: grupos_afectados
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  remote_user: nombre_usuario
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  tasks:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  - name:Descripción de la tarea
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    módulo_ansible_usado:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>      name: servicio o paquete
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>      state: acción a realizar
+</span></span></code></pre></div><h4 id="comentarios">Comentarios<a class="anchorjs-link" href="#comentarios"></a></h4><p>Los comentarios se realizan anteponiendo un <code>#</code> al texto comentado.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># Esto es un comentario
+</span></span></code></pre></div><h4 id="variables-1">Variables<a class="anchorjs-link" href="#variables-1"></a></h4><p>Al igual que los inventarios, los <em>playbooks</em> soportan el uso de variables. Estas se definen utilizando el método <em>vars</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vars:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  nombre_variable: valor
+</span></span></code></pre></div><p>Para acceder al contenido de una variable se utiliza su nombre entre dobles llaves.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ nombre_variable }}
+</span></span></code></pre></div><h4 id="ejemplo-de-playbook">Ejemplo de playbook<a class="anchorjs-link" href="#ejemplo-de-playbook"></a></h4><p>Actualizar los repositorios del grupo &ldquo;Oficina&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>- name: Actualizar
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  hosts: Oficina
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  tasks:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  - name: Actualizar repositorios
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>    ansible.builtin.apt:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>      update_cache: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>    become: true  #Ejecutar la tarea como superusuario
+</span></span></code></pre></div><h3 id="interdependencia-de-tareas">Interdependencia De Tareas<a class="anchorjs-link" href="#interdependencia-de-tareas"></a></h3><p>Se pueden indicar tareas auxiliares que serán disparadas dependiendo del resultado de otras. Este tipo de tareas son llamadas <em>handlers</em>.</p>
+<h4 id="ejemplos-de-handlers">Ejemplos de handlers<a class="anchorjs-link" href="#ejemplos-de-handlers"></a></h4><p>En el siguiente ejemplo se instala Apache HTTP Server y, si la tarea resulta exitosa, se dispara el <em>handler</em> que inicia el servicio. Si la tarea fallase, Ansible no intentará iniciar Apache HTTP Server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>- hosts: all
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  remote_user: mi_usuario
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  become: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  tasks:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    - name: Instala Apache2
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>      apt: name=apache2 state=present update_cache=true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>      notify:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        - &#34;Inicia Apache&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>  handlers:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    - name: Inicia Apache
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>      service: name=apache2 state=restarted
+</span></span></code></pre></div><p>Actualizar repositorios y luego, actualizar paquetes, del grupo &ldquo;Oficina&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>- name: Actualizar
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  hosts: Oficina
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  tasks:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  - name: Actualizar repositorios
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    become: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    ansible.builtin.apt:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>      update_cache: true
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    notify:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    - Actualizar paquetes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>  handlers:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>    - name: Actualizar paquetes
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>      ansible.builtin.apt:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>        upgrade: &#34;yes&#34;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      become: true
+</span></span></code></pre></div><h2 id="línea-de-comandos">Línea De Comandos<a class="anchorjs-link" href="#l%c3%adnea-de-comandos"></a></h2><p>Estas son algunas de las tareas más comunes de Ansible, lanzadas desde la línea de comandos.</p>
+<p>Comprobar que un host se encuentre en línea:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ ansible -i archivo_hots {grupo | nombre | dirección_ip} -m ping
+</span></span></code></pre></div><p>Ejecutar un comando remoto:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ansible -i archivo_hots {grupo | nombre | dirección_ip} -a comando
+</span></span></code></pre></div><p>Ejecutar un comando remoto como <em>root</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ansible -i archivo_hots {grupo | nombre | dirección_ip} -b -K -a comando
+</span></span></code></pre></div><p>Ejecutar un <em>playbook</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ ansible-playbook -i archivo_hots archivo_yaml
+</span></span></code></pre></div><p>Utilizar los comandos remotos para actualizan los paquetes del grupo de hosts &ldquo;oficina&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ ansible -i ~/.ansible/hosts &#34;oficina&#34; -b -K -a &#34;apt update &amp; apt -y upgrade&#34;
+</span></span></code></pre></div><h2 id="posibilidades-de-uso">Posibilidades De Uso<a class="anchorjs-link" href="#posibilidades-de-uso"></a></h2><p>Podemos tener definido un grupo con una única máquina virtual destinada a pruebas (grupo de pruebas) y allí testear nuestro <em>playbook</em>. Haremos los ajustes necesarios y, cuando estemos conformes, cambiamos el nombre del grupo en el <em>playbook</em> (de grupo de pruebas al grupo de los servidores de producción) y volveremos a correr los procesos, esta vez sobre los equipos de producción.</p>
+<h2 id="conclusión">Conclusión<a class="anchorjs-link" href="#conclusi%c3%b3n"></a></h2><p>Ansible permite automatizar tareas de administración de sistemas de forma eficiente y realizarlas en menos tiempo del que normalmente consumirían.</p>
+<h2 id="enlaces-de-utilidad">Enlaces De Utilidad<a class="anchorjs-link" href="#enlaces-de-utilidad"></a></h2><ul>
+<li><a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank">Documentación oficial de Ansible</a></li>
+<li><a href="https://github.com/ansible/ansible" target="_blank">Código fuente de Ansible</a></li>
+</ul>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/blog/2023-03-03-bases-de-datos/" data-toggle="tooltip" data-placement="top" title="Introducción a las Bases de Datos">
+              Siguiente<br>
+              <span>Introducción a las Bases de Datos</span>
+            </a>
+          </li>
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>ETIQUETAS PRINCIPALES</h5>
+  <div class="tags">
+    
+    <a href="/tags/databases/">databases</a>
+    
+    <a href="/tags/featured/">featured</a>
+    
+    <a href="/tags/humor/">humor</a>
+    
+    <a href="/tags/linux/">linux</a>
+    
+    <a href="/tags/sysadmin/">sysadmin</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+
+<li>
+  <a href="https://codeberg.org/mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://pixelfed.social/i/web/profile/499625507351759099" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://mastodon.social/@mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          Copyright © Marcelo Freri 2024  
+          <br>
+          Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://github.com/" target="_blank">GitHub</a>
+          <br>
+          Themed by <a href="https://github.com/roninro/hugo-theme-puppet/" target="_blank">Puppet</a>
+          <br>
+          <a href="https://mfreri.com/privacy/">Política de Privacidad</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QCZ9LYZBKV', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>

@@ -30,7 +30,7 @@
   <meta name="description" content="También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
 En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.
 EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.">
-  <meta name="keywords" content='blog,developer,sysadmin,marcelo,freri,español,uruguay,linux,asesor'>
+  <meta name="keywords" content='blog,developer,sysadmin,marcelo,freri,español,uruguay,linux,servidores'>
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Logs en Linux"/>
@@ -62,10 +62,10 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
   <script src=/js/lazysizes.min.js></script>
 
   
-    <link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png'>
-    <link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png'>
-    <link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png'>
-    <link rel="manifest" href='/site.webmanifest'>
+    <link rel="apple-touch-icon" href='/apple-touch-icon.png'>
+    <link rel="shortcut icon" href='/favicon.png' type="image/x-icon">
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
+    <link rel="icon" href='/favicon.svg' sizes="any" type="image/svg+xml" />
   
 
 </head>
@@ -240,7 +240,7 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
 <h3 id="cron">cron<a class="anchorjs-link" href="#cron"></a></h3><p>Bitácora del programador de tareas. Este archivo en formato de texto plano sirve para controlar si las tareas programadas fueron lanzadas.</p>
 <h2 id="acceso-a-la-información">Acceso a la Información<a class="anchorjs-link" href="#acceso-a-la-informaci%c3%b3n"></a></h2><p>En los archivos log, no sólo se guardan los mensajes de error, sino todos los mensajes arrojados por los distintos servicios y componentes del sistema operativo. El volumen de información contenida suele ser enorme, por lo que es necesario filtrar la información de alguna manera. También debemos tener en cuenta que los mensajes se guardan en orden cronológico, esto hace que los mensajes más recientes se encuentren al final de los archivos.</p>
 <h3 id="mensajes-del-sistema">Mensajes del Sistema<a class="anchorjs-link" href="#mensajes-del-sistema"></a></h3><p>Para leer los mensajes generados por el sistema, utilizamos la herramienta <em>Journal Control</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># journalctl [-r]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># journalctl -r
 </span></span></code></pre></div><p>El modificador <em>-r</em> es opcional y le indica al programa que muestre los mensajes en orden cronológico inverso, es decir, primero los más recientes.</p>
 <p><figure>
   <a class="paragraph-image">

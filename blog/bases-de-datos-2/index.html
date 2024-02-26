@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QCZ9LYZBKV');
+  </script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Introducción a Bases de Datos | Marcelo Freri</title>
+  <meta name="author" content="Marcelo Freri">
+  <meta name="description" content="Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+¿Qué es una Base de Datos?Una base de datos es un conjunto de datos organizados y almacenados en un sistema informático, diseñado para facilitar el acceso, la gestión y la actualización de la información.">
+  <meta name="keywords" content='marcelo, freri, linux, servidores, redes, asesor, administrador, sistemas'>
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Introducción a Bases de Datos"/>
+<meta name="twitter:description" content="Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+¿Qué es una Base de Datos?Una base de datos es un conjunto de datos organizados y almacenados en un sistema informático, diseñado para facilitar el acceso, la gestión y la actualización de la información."/>
+
+  <meta property="og:title" content="Introducción a Bases de Datos" />
+<meta property="og:description" content="Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
+¿Qué es una Base de Datos?Una base de datos es un conjunto de datos organizados y almacenados en un sistema informático, diseñado para facilitar el acceso, la gestión y la actualización de la información." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mfreri.com/blog/bases-de-datos-2/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-02-26T12:00:00-03:00" />
+<meta property="article:modified_time" content="2024-02-26T12:00:00-03:00" />
+
+  <link rel="stylesheet" href='/css/bootstrap.min.css'  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/mystyle.min.css">
+  <script src=/js/lazysizes.min.js></script>
+
+  
+    <link rel="apple-touch-icon" href='/apple-touch-icon.png'>
+    <link rel="shortcut icon" href='/favicon.png' type="image/x-icon">
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
+    <link rel="icon" href='/favicon.svg' sizes="any" type="image/svg+xml" />
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top ">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mfreri.com">Marcelo Freri</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Inicio">Inicio</a></li>
+          
+          <li><a href="/products/" title="Servicios">Servicios</a></li>
+          
+          <li><a href="/archive/" title="Blog">Blog</a></li>
+          
+          <li><a href="/about/" title="¿Quién soy?">¿Quién soy?</a></li>
+          
+          <li><a href="/contact/" title="Contacto">Contacto</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="Buscar...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('/img/bases-de-datos-2/filer.jpg');
+  }
+</style>
+
+<header class="intro-header ">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/databases/" title="databases">databases</a>
+            
+            <a class="tag" href="/tags/featured/" title="featured">featured</a>
+            
+          </div>
+          <h1>Introducción a Bases de Datos</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Publicado por  Marcelo Freri 
+            el 26/2/2024
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de <em>streaming</em> favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.</p>
+<h2 id="qué-es-una-base-de-datos">¿Qué es una Base de Datos?<a class="anchorjs-link" href="#qu%c3%a9-es-una-base-de-datos"></a></h2><p>Una base de datos es un conjunto de datos organizados y almacenados en un sistema informático, diseñado para facilitar el acceso, la gestión y la actualización de la información. Las bases de datos pueden contener diversos tipos de datos, como texto, números, imágenes, sonidos, entre otros, y están diseñadas para ser utilizadas por múltiples usuarios al mismo tiempo.</p>
+<p>Las bases de datos son esenciales para la gestión de la información en muchas aplicaciones informáticas, como sistemas de gestión empresarial, aplicaciones web, sistemas de información geográfica, entre otros. Además, permiten realizar consultas y análisis de datos de forma eficiente y precisa, lo que las convierte en una herramienta fundamental en la toma de decisiones en muchas organizaciones.</p>
+<h2 id="tipos-de-bases-de-datos">Tipos de Bases de Datos<a class="anchorjs-link" href="#tipos-de-bases-de-datos"></a></h2><p>Las bases de datos se clasifican en diferentes tipos, como las bases de datos relacionales, las bases de datos jerárquicas, las bases de datos de objetos y las bases de datos documentales, entre otras. Cada tipo de base de datos tiene sus propias características y ventajas, y se utiliza en función del tipo de información que se quiere almacenar y del uso que se le vaya a dar.</p>
+<ol>
+<li>
+<p>Bases de datos relacionales: Son las más utilizadas en la actualidad. Los datos se almacenan en tablas que están relacionadas entre sí a través de claves primarias y foráneas. Esto permite realizar consultas complejas y obtener información a partir de diferentes tablas. Ejemplos de sistemas gestores de bases de datos relacionales son MySQL, Oracle y SQL Server.</p>
+</li>
+<li>
+<p>Bases de datos jerárquicas: Los datos se almacenan en una estructura de árbol, donde cada registro tiene un único padre y puede tener varios hijos. Este tipo de bases de datos se utilizaba mucho en los años 60 y 70, pero hoy en día se usan menos debido a su baja flexibilidad.</p>
+</li>
+<li>
+<p>Bases de datos de objetos: Están diseñadas para almacenar y manipular objetos, que son instancias de clases definidas por el usuario. Este tipo de bases de datos se utiliza en aplicaciones que requieren manejar grandes cantidades de datos complejos, como sistemas de diseño asistido por computadora (CAD) o sistemas de información geográfica (GIS).</p>
+</li>
+<li>
+<p>Bases de datos documentales: Almacenan datos no estructurados o semiestructurados, como documentos de texto, imágenes o audio. Cada documento se almacena como una unidad independiente y se le pueden asignar etiquetas o metadatos para facilitar su búsqueda y recuperación. Ejemplos de bases de datos documentales son MongoDB y CouchDB.</p>
+</li>
+</ol>
+<p>En este artículo nos centraremos en la bases de datos relacionales, por ser las más comunes.</p>
+<h2 id="bases-de-datos-relacionales">Bases de Datos Relacionales<a class="anchorjs-link" href="#bases-de-datos-relacionales"></a></h2><h3 id="componentes">Componentes<a class="anchorjs-link" href="#componentes"></a></h3><p>Los principales componentes de una base de datos relacional son:</p>
+<ul>
+<li>Tablas</li>
+<li>Claves</li>
+<li>Índices</li>
+<li>Vistas</li>
+<li>Consultas</li>
+<li>Transacciones</li>
+</ul>
+<h4 id="tablas">Tablas<a class="anchorjs-link" href="#tablas"></a></h4><p>En una base de datos relacional, una tabla es una estructura que se utiliza para almacenar datos. Una tabla está compuesta por filas y columnas, similar a una hoja de cálculo.</p>
+<p>Las filas, también llamadas registros o tuplas, representan cada uno de los elementos o instancias que se desean almacenar en la tabla. Por ejemplo, en una tabla de clientes, cada fila representaría a un cliente diferente.</p>
+<p>Las columnas, también llamadas campos o atributos, representan las características o propiedades de los elementos almacenados en la tabla. Siguiendo con el ejemplo anterior, las columnas podrían ser el nombre, apellido, dirección, teléfono, correo electrónico, etc.</p>
+<p>Cada columna de la tabla tiene un nombre único y un tipo de datos asociado, que determina el tipo de información que se puede almacenar en esa columna (por ejemplo, texto, números enteros, fechas, etc.).</p>
+<p>Una de las columnas de la tabla suele ser la clave primaria, que es un identificador único para cada fila de la tabla y se utiliza para relacionar la tabla con otras tablas en la base de datos.</p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="https://mfreri.com
+/img/bases-de-datos-2/image02.jpg" data-action="zoom" alt="Ejemplo de una tabla"  class="lazyload">
+  </a>
+  
+</figure></p>
+<p>En resumen, una tabla en una base de datos relacional es una estructura que permite almacenar datos de forma organizada y estructurada, utilizando filas y columnas para representar elementos y sus propiedades, respectivamente.</p>
+<h4 id="claves">Claves<a class="anchorjs-link" href="#claves"></a></h4><p>Una clave es un campo o conjunto de campos que se utiliza para identificar de manera única cada fila o registro de una tabla.</p>
+<p>Los tipos de claves más comunes son:</p>
+<ul>
+<li>Clave primaria</li>
+<li>Clave secundaria</li>
+<li>Clave foránea</li>
+</ul>
+<h5 id="clave-primaria">Clave Primaria<a class="anchorjs-link" href="#clave-primaria"></a></h5><p>Una clave primaria es una columna o conjunto de columnas que identifica de forma única cada fila en una tabla. La clave primaria se utiliza para garantizar la integridad y la consistencia de los datos almacenados en la tabla, ya que cada fila debe tener un valor único para la clave primaria.</p>
+<p>Las claves primarias suelen ser automáticas y numéricas, y se generan automáticamente cuando se crea una nueva fila en la tabla. Además, las claves primarias no pueden contener valores nulos y deben ser indexadas para optimizar el acceso a los datos.</p>
+<h5 id="clave-secundaria">Clave Secundaria<a class="anchorjs-link" href="#clave-secundaria"></a></h5><p>Una clave secundaria es una columna o conjunto de columnas que también se utiliza para identificar filas en una tabla, pero que no necesariamente es única para cada fila. A menudo, una clave secundaria se utiliza para establecer relaciones entre tablas en una base de datos relacional, y puede contener valores nulos y duplicados.</p>
+<p>Las claves secundarias también se pueden utilizar para optimizar el acceso a los datos al crear índices en las columnas correspondientes. Sin embargo, a diferencia de las claves primarias, las claves secundarias no garantizan la integridad y la consistencia de los datos almacenados en la tabla.</p>
+<h5 id="clave-foránea">Clave Foránea<a class="anchorjs-link" href="#clave-for%c3%a1nea"></a></h5><p>La clave foránea se define en una tabla como una columna o conjunto de columnas que contienen valores que coinciden con los valores de la clave primaria de otra tabla. Esta relación permite garantizar la integridad referencial de los datos almacenados en la base de datos, ya que la clave foránea debe contener valores válidos que existan en la tabla referenciada.</p>
+<p>El término &ldquo;foránea&rdquo; se refiere a que el dato contenido en ella no forma parte del contexto de atributos contenidos en la tabla, sino que pertenecen al contexto de una tabla diferente.</p>
+<h4 id="índices">Índices<a class="anchorjs-link" href="#%c3%adndices"></a></h4><p>Un índice es una estructura de datos que se utiliza para optimizar el acceso a los datos almacenados en una tabla.</p>
+<p>Un índice funciona de manera similar a un índice en un libro, donde se enumeran los temas y las páginas en las que se pueden encontrar. En el caso de una base de datos, el índice contiene una lista ordenada de valores de una o más columnas de una tabla, junto con una referencia a la ubicación física de los registros correspondientes en la tabla.</p>
+<p>Cuando se realiza una consulta a la tabla para buscar datos específicos, el motor de la base de datos puede utilizar el índice para encontrar los registros relevantes más rápidamente, en lugar de tener que escanear toda la tabla secuencialmente. Esto puede mejorar significativamente el rendimiento de las consultas, especialmente en tablas grandes.</p>
+<p>Es importante tener en cuenta que el uso de índices también puede tener un impacto en el rendimiento de las operaciones de escritura en la tabla, como la inserción, actualización o eliminación de registros, ya que el motor de la base de datos debe actualizar los índices correspondientes cada vez que se modifican los datos. Por lo tanto, es necesario diseñar cuidadosamente los índices para equilibrar el rendimiento de las consultas y las operaciones de escritura.</p>
+<h4 id="vistas">Vistas<a class="anchorjs-link" href="#vistas"></a></h4><p>Se trata de una tabla virtual que se define a partir de una consulta y que permite mostrar los datos almacenados en otras tablas de forma personalizada y simplificada.</p>
+<p>Una vista no almacena datos propiamente dichos, sino que se basa en los datos almacenados en otras tablas y presenta una vista lógica de esos datos. La definición de una vista incluye la especificación de las columnas que se van a mostrar, el orden en que se van a presentar los datos y cualquier filtro o restricción que se vaya a aplicar a los datos.</p>
+<p>Las vistas pueden ser útiles en varios escenarios, como por ejemplo:</p>
+<ul>
+<li>
+<p>Simplificar la consulta de datos: al crear una vista que contenga solo los datos relevantes para una aplicación o usuario en particular, se pueden simplificar las consultas y reducir la cantidad de datos que se necesitan procesar.</p>
+</li>
+<li>
+<p>Ocultar información: al crear una vista que muestre solo una parte de los datos almacenados en una tabla, se puede ocultar información sensible o irrelevante para ciertos usuarios.</p>
+</li>
+<li>
+<p>Combinar datos de varias tablas: al crear una vista que combine datos de varias tablas, se pueden presentar los datos de forma más coherente y facilitar su análisis.</p>
+</li>
+</ul>
+<p>Las vistas se pueden utilizar como si fueran tablas físicas, es decir, se pueden realizar consultas, filtrar datos, ordenar resultados, etc. Sin embargo, es importante tener en cuenta que cualquier cambio en los datos subyacentes de las tablas originales se reflejará en la vista correspondiente.</p>
+<h4 id="consultas">Consultas<a class="anchorjs-link" href="#consultas"></a></h4><p>Se conoce como consulta a la operación que se realiza para recuperar o manipular datos almacenados en una o varias tablas.</p>
+<p>La consulta se expresa mediante un lenguaje de consulta, como SQL (Structured Query Language), que permite especificar los criterios de búsqueda y seleccionar los campos y filas deseados. Las consultas pueden ser simples o complejas, dependiendo del número de tablas involucradas y de la complejidad de los criterios de selección.</p>
+<p>Las consultas se utilizan para realizar diversas operaciones en la base de datos, como por ejemplo:</p>
+<ul>
+<li>Obtener datos de una o varias tablas según criterios específicos.</li>
+<li>Insertar nuevos registros en una tabla.</li>
+<li>Actualizar los datos existentes en una tabla.</li>
+<li>Eliminar registros de una tabla.</li>
+<li>Crear nuevas tablas o modificar la estructura de las tablas existentes.</li>
+<li>Realizar operaciones de agregación y cálculo en los datos almacenados en la base de datos.</li>
+</ul>
+<p>Las consultas son una herramienta fundamental en la gestión y el análisis de datos almacenados en bases de datos relacionales, ya que permiten extraer información relevante y procesarla de manera eficiente.</p>
+<h4 id="transacciones">Transacciones<a class="anchorjs-link" href="#transacciones"></a></h4><p>Una transacción es una unidad de trabajo lógica que se compone de una o varias operaciones de lectura y escritura en la base de datos, y que se ejecuta de forma atómica e indivisible.</p>
+<p>Cada transacción debe satisfacer cuatro propiedades fundamentales, conocidas como ACID (Atomicity, Consistency, Isolation and Durability):</p>
+<ul>
+<li>
+<p>Atomicidad: la transacción se ejecuta como una unidad indivisible, es decir, o se completa en su totalidad o no se realiza ningún cambio en la base de datos.</p>
+</li>
+<li>
+<p>Consistencia: la transacción debe dejar la base de datos en un estado consistente, lo que significa que debe mantener la integridad de los datos y cumplir con todas las restricciones definidas en la base de datos.</p>
+</li>
+<li>
+<p>Aislamiento: cada transacción se ejecuta de forma aislada respecto a las demás transacciones que se estén realizando en la base de datos, por lo que los cambios realizados por una transacción no son visibles para otras transacciones hasta que la primera se ha completado.</p>
+</li>
+<li>
+<p>Durabilidad: una vez completada una transacción, los cambios realizados en la base de datos son permanentes y no se pierden, incluso en caso de fallos del sistema.</p>
+</li>
+</ul>
+<p>Las transacciones son una herramienta fundamental en la gestión de bases de datos, ya que permiten garantizar la integridad y la consistencia de los datos almacenados en la base de datos, especialmente en entornos concurrentes donde varios usuarios pueden acceder y modificar los datos simultáneamente.</p>
+<h2 id="sistemas-gestores-de-bases-de-datos">Sistemas Gestores de Bases de Datos<a class="anchorjs-link" href="#sistemas-gestores-de-bases-de-datos"></a></h2><p>Un sistema gestor de bases de datos (DBMS) es un software que permite la creación, mantenimiento, administración y uso de bases de datos. Estos sistemas proveen una interfaz entre la base de datos y los usuarios finales o las aplicaciones de software, permitiendo a los usuarios interactuar con la base de datos de una manera más fácil y eficiente.</p>
+<p>Los DBMS son responsables de organizar y almacenar los datos de manera eficiente, garantizar la integridad y seguridad de los datos, permitir el acceso concurrente de múltiples usuarios y aplicaciones, y proporcionar herramientas para la administración, el mantenimiento e incluso el respaldo de la base de datos.</p>
+<p>Algunos ejemplos populares de DBMS son:</p>
+<ul>
+<li>MariaDB</li>
+<li>MongoDB</li>
+<li>MS SQL Server</li>
+<li>MySQL</li>
+<li>Oracle</li>
+<li>PostgreSQL</li>
+</ul>
+<h2 id="conclusión">Conclusión<a class="anchorjs-link" href="#conclusi%c3%b3n"></a></h2><p>Las bases de datos son una herramienta esencial para las empresas y organizaciones de todos los tamaños. Proporcionan una forma organizada y eficiente de almacenar y recuperar información.</p>
+<p>Sus características de almacenamiento y gestión de acceso a los datos les permiten soportar una amplia gama de aplicaciones, desde la gestión de transacciones en tiempo real hasta el análisis de datos empresariales complejos y la minería de datos.</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/blog/2023-09-20-sysadmin/" data-toggle="tooltip" data-placement="top" title="¿Qué es un Administrador de Sistemas?">
+              Anterior<br>
+              <span>¿Qué es un Administrador de Sistemas?</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>ETIQUETAS PRINCIPALES</h5>
+  <div class="tags">
+    
+    <a href="/tags/databases/">databases</a>
+    
+    <a href="/tags/featured/">featured</a>
+    
+    <a href="/tags/humor/">humor</a>
+    
+    <a href="/tags/linux/">linux</a>
+    
+    <a href="/tags/sysadmin/">sysadmin</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+
+<li>
+  <a href="https://codeberg.org/mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://www.instagram.com/mfreri/" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://mastodon.social/@mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          Copyright © Marcelo Freri 2024  
+          <br>
+          Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://github.com/" target="_blank">GitHub</a>
+          <br>
+          Themed by <a href="https://github.com/roninro/hugo-theme-puppet/" target="_blank">Puppet</a>
+          <br>
+          <a href="https://mfreri.com/privacy/">Política de Privacidad</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QCZ9LYZBKV', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>

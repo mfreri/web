@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mfreri.com/tags/databases/</loc>
+    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://mfreri.com/tags/featured/</loc>
+    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://mfreri.com/blog/bases-de-datos-2/</loc>
+    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://mfreri.com/</loc>
+    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://mfreri.com/blog/</loc>
+    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://mfreri.com/tags/</loc>
+    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
+  </url><url>
     <loc>https://mfreri.com/blog/2023-09-20-sysadmin/</loc>
     <lastmod>2023-09-20T15:14:00-03:00</lastmod>
   </url><url>
-    <loc>https://mfreri.com/tags/featured/</loc>
-    <lastmod>2023-09-20T15:14:00-03:00</lastmod>
-  </url><url>
     <loc>https://mfreri.com/tags/humor/</loc>
-    <lastmod>2023-09-20T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/</loc>
-    <lastmod>2023-09-20T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/</loc>
-    <lastmod>2023-09-20T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/</loc>
     <lastmod>2023-09-20T15:14:00-03:00</lastmod>
   </url><url>
     <loc>https://mfreri.com/tags/linux/</loc>
@@ -28,12 +34,6 @@
   </url><url>
     <loc>https://mfreri.com/tags/sysadmin/</loc>
     <lastmod>2023-03-22T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/databases/</loc>
-    <lastmod>2023-03-03T15:10:22-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/2023-03-03-bases-de-datos/</loc>
-    <lastmod>2023-03-03T15:10:22-03:00</lastmod>
   </url><url>
     <loc>https://mfreri.com/blog/2023-02-03-ansible/</loc>
     <lastmod>2023-02-03T15:10:22-03:00</lastmod>

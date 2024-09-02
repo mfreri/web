@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QCZ9LYZBKV');
+  </script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Respaldos | Marcelo Freri</title>
+  <meta name="author" content="Marcelo Freri">
+  <meta name="description" content="¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?
+En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.
+¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información.">
+  <meta name="keywords" content='marcelo, freri, linux, servidores, redes, asesor, administrador, sistemas'>
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Respaldos"/>
+<meta name="twitter:description" content="¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?
+En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.
+¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información."/>
+
+  <meta property="og:title" content="Respaldos" />
+<meta property="og:description" content="¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?
+En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.
+¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mfreri.com/blog/2024-09-02-respaldos/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-09-02T16:50:00-03:00" />
+<meta property="article:modified_time" content="2024-09-02T16:50:00-03:00" />
+
+  <link rel="stylesheet" href='/css/bootstrap.min.css'  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/mystyle.min.css">
+  <script src=/js/lazysizes.min.js></script>
+
+  
+    <link rel="apple-touch-icon" href='/apple-touch-icon.png'>
+    <link rel="shortcut icon" href='/favicon.png' type="image/x-icon">
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
+    <link rel="icon" href='/favicon.svg' sizes="any" type="image/svg+xml" />
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top ">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mfreri.com">Marcelo Freri</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Inicio">Inicio</a></li>
+          
+          <li><a href="/products/" title="Servicios">Servicios</a></li>
+          
+          <li><a href="/archive/" title="Blog">Blog</a></li>
+          
+          <li><a href="/about/" title="¿Quién soy?">¿Quién soy?</a></li>
+          
+          <li><a href="/contact/" title="Contacto">Contacto</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="Buscar...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('/img/2024-09-02-respaldos/Panumas-Nikhomkhai-Data-storage.jpg');
+  }
+</style>
+
+<header class="intro-header ">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/sysadmin/" title="sysadmin">sysadmin</a>
+            
+            <a class="tag" href="/tags/featured/" title="featured">featured</a>
+            
+          </div>
+          <h1>Respaldos</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Publicado por  Marcelo Freri 
+            el 2/9/2024
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <h2 id="qué-es-un-respaldo">¿Qué es un respaldo?<a class="anchorjs-link" href="#qu%c3%a9-es-un-respaldo"></a></h2><blockquote>
+<p>Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?</p>
+</blockquote>
+<p>En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.</p>
+<h2 id="para-qué-sirve-un-respaldo">¿Para qué sirve un respaldo?<a class="anchorjs-link" href="#para-qu%c3%a9-sirve-un-respaldo"></a></h2><p>Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información. Esto va desde borrar accidentalmente un archivo hasta una catástrofe mayor como puede ser un robo o incendio. Básicamente, si perdemos el acceso a un PC y lo reemplazamos por otro nuevo, deberíamos poder restaurar los sistemas, aplicaciones, datos y configuración que contenía el PC original.</p>
+<h2 id="qué-respaldar">¿Qué respaldar?<a class="anchorjs-link" href="#qu%c3%a9-respaldar"></a></h2><p>Todo lo que necesitemos para cumplir con el punto anterior. Documentos, imágenes, bases de datos, agendas, favoritos de internet, correos, archivos de configuración de las aplicaciones, etc. También debemos respaldar los datos contenidos en la nube, tanto si es una nube propia de la empresa como si es un servicio tercerizado (Dropbox, Google, Microsoft, Apple, etc).</p>
+<p>Hoy en día solemos tener el ordenador y el móvil sincronizados, de manera que datos como la agenda o nuestra galería de fotos se duplican en ambos dispositivos. Esto no es necesariamente un respaldo desde el momento en que si borro un contacto o una foto de un dispositivo, el otro también lo elimina. Como habíamos aclarado al principio, los respaldos deben permanecer inmutables.</p>
+<p>También deberíamos contar con los instaladores y licencias de los programas que usamos, ya sea las aplicaciones que se instalan localmente, como también los sistemas operativos.</p>
+<p>En el caso de servidores virtuales, se respalda una imagen de máquina virtual y su disco. En caso de una falla en el servidor físico, no debería tomar demasiado tiempo levantar la máquina virtual respaldada en otro servidor y recuperar los archivos de datos desde el respaldo.</p>
+<h2 id="políticas-de-respaldo">Políticas de respaldo<a class="anchorjs-link" href="#pol%c3%adticas-de-respaldo"></a></h2><p>Principalmente para el caso de empresas, es buena práctica tener definidas políticas claras de respaldo. Esta políticas deberían establecer con claridad el tipo de información que se respaldará, pudiéndose especificar además la que no se incluirá. Por ejemplo, es bastante común que se guarden archivos personales en las PC de una oficina: documentación personal escaneada, fotos de las vacaciones, música, etc. Más allá de si esta debería ser una práctica permitida o no, es claro que sucede y de manera bastante frecuente. Por esto es necesario que la política de respaldo especifique qué sucede con información que no es relevante para el funcionamiento de la empresa, dejando claro si se incluye o no en los respaldos.</p>
+<h2 id="medios-de-respaldo">Medios de respaldo<a class="anchorjs-link" href="#medios-de-respaldo"></a></h2><p>El medio sobre el cual se almacena el respaldo es algo que dependerá de múltiples factores tales como el volumen de información a respaldar, el costo de los medios de respaldo y el avance tecnológico. Cuando yo daba mis primeros pasos en el mundo de las TI, el medio de respaldo por excelencia eran las cintas, luego fueron los ZIP Disks, los CD, DVD&hellip; y así hasta hoy en 2024 que es mucho más común la utilización de discos externos, sin duda motivado por su bajo costo por byte y su practicidad para manejo y almacenamiento.</p>
+<p>Por otro lado, si necesitamos respaldar un bajo volumen de datos, los pendrives siguen siendo una opción simple y de bajo precio, además de los servicios de almacenamiento en la nube.</p>
+<h2 id="tipos-de-respaldos">Tipos de respaldos<a class="anchorjs-link" href="#tipos-de-respaldos"></a></h2><p>Luego de determinar qué archivos se van a respaldar, debemos decidir qué método de respaldo utilizar. Se diferencian en la forma en que actualizan la información contenida en los respaldos y, sin bien existen cerca de una decena de métodos, vamos a tratar los tres más comunes.</p>
+<h3 id="respaldo-completo">Respaldo completo<a class="anchorjs-link" href="#respaldo-completo"></a></h3><p>Este es el respaldo que más tiempo consume, pero también el más seguro. Cada vez que se hace un respaldo completo, se copian la totalidad de los datos elegidos para su resguardo. Si necesitamos recuperar los datos, bastará contar con el último respaldo realizado sin errores.</p>
+<h3 id="respaldo-diferencial">Respaldo diferencial<a class="anchorjs-link" href="#respaldo-diferencial"></a></h3><p>En este método, se elige un día de la semana o mes para realizar un respaldo completo y el resto del tiempo se realiza una copia solamente de los archivos modificados desde el último respaldo completo. Esto tiene la ventaja de ser más rápido pero implica que, para restaurar la información, necesitaremos el medio con el respaldo completo y el del último respaldo diferencial.</p>
+<h3 id="respaldo-incremental">Respaldo incremental<a class="anchorjs-link" href="#respaldo-incremental"></a></h3><p>Este es el método más rápido de todos. Al igual que con el respaldo diferencial, se debe realizar un respaldo completo pero luego cada respaldo incremental copia únicamente los datos que variaron desde el respaldo anterior, sea o no un respaldo completo. El inconveniente que acarrea este método es que, al momento de hacer una restauración, necesitaremos el último respaldo completo más cada uno de los respaldos posteriores.</p>
+<h3 id="un-ejemplo-práctico">Un ejemplo práctico<a class="anchorjs-link" href="#un-ejemplo-pr%c3%a1ctico"></a></h3><p>Vamos a suponer que todas las noches hacemos un respaldo y que utilizamos un disco distinto para cada día de la semana, de lunes a viernes. Supongamos además que el jueves se nos rompe el disco duro de un PC y lo sustituimos por uno nuevo.</p>
+<p>Si hacemos respaldos completos, nos bastará con recuperar el último respaldo desde el último medio utilizado para respaldar.</p>
+<p>Si utilizamos el método de respaldo diferencial, realizando un respaldo completo los viernes, vamos a necesitar el último respaldo completo y el último respaldo diferencial. Es decir, los respaldos del viernes (completo) y miércoles (diferencial).</p>
+<p>Pero si habíamos elegido usar el método de respaldo incremental, vamos a requerir el respaldo completo y todos los respaldos incrementales de cada día de la semana, anteriores a la rotura del disco duro del ordenador (viernes, lunes, martes y miércoles).</p>
+<h2 id="cuántas-copias-realizar">¿Cuántas copias realizar?<a class="anchorjs-link" href="#cu%c3%a1ntas-copias-realizar"></a></h2><p>Existe un estándar sugerido que se conoce como 3-2-1. Esto significa que, por cada respaldo, se realizan 3 copias en 2 medios diferentes, con 1 copia almacenada fuera del edificio donde residen los datos originales. Esto último es para que si ocurre, por ejemplo, un incendio en la oficina, no se pierdan también los respaldos.</p>
+<p>Obviamente que el 3-2-1 no es una regla de oro, pero en lo personal sí recomiendo encarecidamente que al menos un set de copias se guarden fuera de las oficinas.</p>
+<h2 id="frecuencia-de-los-respaldos">Frecuencia de los respaldos<a class="anchorjs-link" href="#frecuencia-de-los-respaldos"></a></h2><p>Tengamos en cuenta que al recuperar un archivo desde un respaldo, se pierde lo que hayamos modificado con posterioridad a la copia. La cantidad de información en riesgo siempre va a depender de la frecuencia con la que realizamos los respaldos.</p>
+<p>Si podemos volver a realizar el trabajo de una mañana o tarde sin mayores inconvenientes, un respaldo a la noche y otro al mediodía podría ser nuestra solución. Por otro lado, un respaldo diario implicaría que, a lo sumo, podemos llegar a perder un día completo de trabajo.</p>
+<p>Cuanto menos información estemos dispuestos a perder, mayor frecuencia de respaldos y también, mayor costo y mayor tiempo en que los sistemas se encontraran respaldando, lo que puede ocasionar demoras en el funcionamiento general de las aplicaciones.</p>
+<p>También debemos considerar si realmente es necesario respaldar un dato con demasiada frecuencia. Un archivo que sabemos que se va a modificar un día al mes tal vez no requiera ser respaldado diariamente.</p>
+<h2 id="histórico-de-respaldos">Histórico de respaldos<a class="anchorjs-link" href="#hist%c3%b3rico-de-respaldos"></a></h2><p>¿Por cuánto tiempo deben mantenerse los respaldos? Depende de que tan atrás en el tiempo vamos a querer recuperar los datos y de lo que es legal mantenerlos.</p>
+<p>Supongamos que hoy notamos un archivo corrupto y necesitamos recuperarlo desde un respaldo. Procedemos a levantar el último respaldo y nos damos cuenta de que el archivo ya estaba corrupto cuando se respaldo la última vez. Procedemos entonces a revisar el penúltimo respaldo y resulta que también estaba corrupto el archivo. Seguramente se trata de un archivo al que accedemos poco, por ejemplo una planilla de sueldos a la que accedemos una vez al mes. La pregunta entonces es hasta qué punto en el tiempo el archivo nos sería de utilidad? Un mes atrás podría ser todavía útil, pero un año antes tal vez ya no nos sirve y estamos ocupando un medio de almacenamiento con información que ya caducó.</p>
+<p>También pueden existir limitantes legales al tiempo que ciertos datos personales pueden ser conservados, y esto obviamente abarca a los respaldos.</p>
+<h2 id="seguridad-de-los-respaldos">Seguridad de los respaldos<a class="anchorjs-link" href="#seguridad-de-los-respaldos"></a></h2><p>Los respaldos deben ser tratados con la importancia que la información contenida requiere. Consideren que allí se encuentra la información privada y secreta nuestra o de la empresa.</p>
+<p>Deben ser almacenados en un lugar seguro, de ser posible con acceso restringido, y los datos deben estar cifrados. De este modo, si alguien se hiciese con nuestros respaldos, necesitará una contraseña para desencriptarlos.</p>
+<h2 id="automatización-y-comprobación">Automatización y comprobación<a class="anchorjs-link" href="#automatizaci%c3%b3n-y-comprobaci%c3%b3n"></a></h2><p>Existen distintas opiniones acerca de si los respaldos deben ser automáticos o manuales, con argumentos a favor y en contra para ambas posturas. Les voy a dar mi opinión personal a este respecto.</p>
+<p>Para un hogar o pequeño negocio, los respaldos manuales creo que son los más convenientes por su bajo costo y mayor control de cada operación. También es recomendable la creación de un script que copie los diferentes archivos y carpetas que nos interesan, pero el cual lanzaremos manualmente. La ventaja de un respaldo manual es que podemos ver en tiempo real si se produce algún fallo y actuar en consecuencia.</p>
+<p>Para empresas, recomiendo automatizarlos pero estableciendo una rutina periódica para comprobar su correcto funcionamiento. Dicha rutina debe incluir la comprobación de los <em>logs</em> de respaldo en busca de alertas y errores, como así también intentar recuperar algún archivo aleatorio (diferente todas las veces) para comprobar que el respaldo es legible y la información puede ser accedida sin inconvenientes. Los respaldos programados permitirán ser realizados en horarios en que haya poca o ninguna actividad en la empresa.</p>
+<h2 id="plan-de-contingencia">Plan de contingencia<a class="anchorjs-link" href="#plan-de-contingencia"></a></h2><p>Además de las políticas de respaldo, se deben documentar los métodos para actuar en caso de que algún problema requiera la recuperación de los datos respaldados. El plan debe incluir una persona o puesto que tomará las decisiones al respecto de si aplica proceder con una restauración o si, por el contrario, la avería es recuperable sin necesidad de recurrir a los respaldos.</p>
+<p>El plan de contingencia también debe especificar con claridad la prioridad de recuperación. Cuando se produce una falla en varios sistemas al mismo tiempo, todos los departamentos afectados querrán tener prioridad uno para volver a estar operativos, lo cual es impracticable. La prioridad debe acordarse previamente con la gerencia y/o dirección de la empresa.</p>
+<h2 id="destrucción-de-respaldos">Destrucción de respaldos<a class="anchorjs-link" href="#destrucci%c3%b3n-de-respaldos"></a></h2><p>Finalmente, habrá momentos en que deberemos deshacernos de un set de respaldos, bien porque la información que contiene ya no es necesaria, o bien porque el medio físico ha alcanzado el final de su vida útil.</p>
+<p>Lo recomendable es realizar un borrado seguro (se reescriben los medios con datos aleatorios) y/o destruir el medio físico. Las cintas se queman, los medios ópticos se rompen y a los discos duros se les perforan los platos con un taladro. Drástico sí, pero también irrecuperable.</p>
+<h2 id="conclusión">Conclusión<a class="anchorjs-link" href="#conclusi%c3%b3n"></a></h2><p>Los respaldos son una parte fundamental de cualquier estrategia de seguridad informática, tanto para individuos como para empresas. Este artículo ha abordado los aspectos clave de los respaldos, desde su definición y propósito hasta las mejores prácticas para su implementación y gestión.</p>
+<p>Hemos explorado qué información debe respaldarse, los diferentes tipos de respaldos (completo, incremental y diferencial), y la importancia de establecer políticas claras de respaldo. También se han discutido los diversos medios de almacenamiento disponibles y la regla 3-2-1 para la redundancia de copias.</p>
+<p>También destacamos la relevancia de determinar la frecuencia adecuada de los respaldos, mantener un histórico apropiado, y garantizar la seguridad de la información respaldada. Además, se han abordado temas como la automatización de los procesos de respaldo, la necesidad de comprobar regularmente la integridad de las copias, y la importancia de contar con un plan de contingencia.</p>
+<p>Finalmente, se ha enfatizado la necesidad de una destrucción segura de los respaldos obsoletos para proteger la información sensible.</p>
+<p>En resumen, los respaldos son una medida de seguridad crítica que requiere una planificación cuidadosa, implementación consistente y revisión regular para garantizar la protección efectiva de los datos y la continuidad de las operaciones en caso de pérdida de información.</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/blog/bases-de-datos-2/" data-toggle="tooltip" data-placement="top" title="Introducción a las Bases de Datos">
+              Anterior<br>
+              <span>Introducción a las Bases de Datos</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>ETIQUETAS PRINCIPALES</h5>
+  <div class="tags">
+    
+    <a href="/tags/databases/">databases</a>
+    
+    <a href="/tags/featured/">featured</a>
+    
+    <a href="/tags/humor/">humor</a>
+    
+    <a href="/tags/linux/">linux</a>
+    
+    <a href="/tags/sysadmin/">sysadmin</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+
+<li>
+  <a href="https://codeberg.org/mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://www.instagram.com/mfreri/" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+<li>
+  <a href="https://mastodon.social/@mfreri" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          Copyright © Marcelo Freri 2024  
+          <br>
+          Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://github.com/" target="_blank">GitHub</a>
+          <br>
+          Themed by <a href="https://github.com/roninro/hugo-theme-puppet/" target="_blank">Puppet</a>
+          <br>
+          <a href="https://mfreri.com/privacy/">Política de Privacidad</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QCZ9LYZBKV', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>

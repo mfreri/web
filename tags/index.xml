@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2024</copyright>
-    <lastBuildDate>Mon, 26 Feb 2024 12:00:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>featured</title>
+      <link>https://mfreri.com/tags/featured/</link>
+      <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
+      
+      <guid>https://mfreri.com/tags/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysadmin</title>
+      <link>https://mfreri.com/tags/sysadmin/</link>
+      <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
+      
+      <guid>https://mfreri.com/tags/sysadmin/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>databases</title>
       <link>https://mfreri.com/tags/databases/</link>
       <pubDate>Mon, 26 Feb 2024 12:00:00 -0300</pubDate>
       
       <guid>https://mfreri.com/tags/databases/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>featured</title>
-      <link>https://mfreri.com/tags/featured/</link>
-      <pubDate>Mon, 26 Feb 2024 12:00:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/featured/</guid>
       <description></description>
     </item>
     
@@ -41,15 +50,6 @@
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
       
       <guid>https://mfreri.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sysadmin</title>
-      <link>https://mfreri.com/tags/sysadmin/</link>
-      <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/sysadmin/</guid>
       <description></description>
     </item>
     

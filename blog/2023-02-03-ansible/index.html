@@ -27,18 +27,18 @@
     
   <title>Ansible - Primer Contacto | Marcelo Freri</title>
   <meta name="author" content="Marcelo Freri">
-  <meta name="description" content="Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.
-¿Qué Es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran.">
+  <meta name="description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar un nuevo paquete en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
+¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.">
   <meta name="keywords" content='marcelo, freri, linux, servidores, redes, asesor, administrador, sistemas'>
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ansible - Primer Contacto"/>
-<meta name="twitter:description" content="Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.
-¿Qué Es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran."/>
+<meta name="twitter:description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar un nuevo paquete en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
+¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas."/>
 
   <meta property="og:title" content="Ansible - Primer Contacto" />
-<meta property="og:description" content="Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.
-¿Qué Es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran." />
+<meta property="og:description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar un nuevo paquete en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
+¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mfreri.com/blog/2023-02-03-ansible/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2023-02-03T15:10:22-03:00" />
@@ -220,8 +220,8 @@
               col-lg-8 col-lg-offset-2
               col-md-10 col-md-offset-1
               post-container">
-        <p>Supongamos que tenemos una red con diez servidores y necesitamos instalar un nuevo paquete en ellos. Normalmente, tendríamos que conectarnos a esos equipos, uno por uno, y realizar la instalación. Ahora bien, ¿y si en lugar de diez fuesen cien? ¿Y si fuesen mil? Es aquí donde entra Ansible.</p>
-<h2 id="qué-es-ansible">¿Qué Es Ansible?<a class="anchorjs-link" href="#qu%c3%a9-es-ansible"></a></h2><p>Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran.</p>
+        <p>Supongamos que tenemos una red con diez computadores y necesitamos instalar un nuevo paquete en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.</p>
+<h2 id="qué-es-ansible">¿Qué es Ansible?<a class="anchorjs-link" href="#qu%c3%a9-es-ansible"></a></h2><p>Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas. Permite instalar, configurar y desinstalar aplicaciones de manera sencilla, sin importar el tamaño de la red ni la cantidad de servidores que la integran.</p>
 <h2 id="características">Características<a class="anchorjs-link" href="#caracter%c3%adsticas"></a></h2><ul>
 <li>Ansible no necesita instalar clientes ya que usa las características propias de Linux.</li>
 <li>Utiliza OpenSSH para conectarse a los hosts, lo que mejora la seguridad y solidez de los procesos.</li>
@@ -230,8 +230,8 @@
 <li>Es de código abierto.</li>
 </ul>
 <h2 id="instalación">Instalación<a class="anchorjs-link" href="#instalaci%c3%b3n"></a></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ sudo apt install ansible ansible-core
-</span></span></code></pre></div><h2 id="guía-de-uso">Guía De Uso<a class="anchorjs-link" href="#gu%c3%ada-de-uso"></a></h2><p>Ansible funciona con dos grupos de archivos a tener en cuenta: los inventarios de equipos y los <em>playbooks</em>.</p>
-<h3 id="inventario-de-equipos">Inventario De Equipos<a class="anchorjs-link" href="#inventario-de-equipos"></a></h3><p>Son archivos que contienen una lista de equipos de la red. Su formato es el siguiente:</p>
+</span></span></code></pre></div><h2 id="guía-de-uso">Guía de Uso<a class="anchorjs-link" href="#gu%c3%ada-de-uso"></a></h2><p>Ansible funciona con dos grupos de archivos a tener en cuenta: los inventarios de equipos y los <em>playbooks</em>.</p>
+<h3 id="inventario-de-equipos">Inventario de Equipos<a class="anchorjs-link" href="#inventario-de-equipos"></a></h3><p>Son archivos que contienen una lista de equipos de la red. Su formato es el siguiente:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[nombre_grupo]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>nombre_host ansible_host=dirección_ip
 </span></span></code></pre></div><h4 id="ejemplo-de-inventario">Ejemplo de inventario<a class="anchorjs-link" href="#ejemplo-de-inventario"></a></h4><p>Definir un grupo de servidores de archivos llamado <em>samba</em>, que incluya el servidor de <em>contabilidad</em> y el de <em>sueldos</em>.</p>
@@ -269,7 +269,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>    ansible.builtin.apt:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>      update_cache: true
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>    become: true  #Ejecutar la tarea como superusuario
-</span></span></code></pre></div><h3 id="interdependencia-de-tareas">Interdependencia De Tareas<a class="anchorjs-link" href="#interdependencia-de-tareas"></a></h3><p>Se pueden indicar tareas auxiliares que serán disparadas dependiendo del resultado de otras. Este tipo de tareas son llamadas <em>handlers</em>.</p>
+</span></span></code></pre></div><h3 id="interdependencia-de-tareas">Interdependencia de Tareas<a class="anchorjs-link" href="#interdependencia-de-tareas"></a></h3><p>Se pueden indicar tareas auxiliares que serán disparadas dependiendo del resultado de otras. Este tipo de tareas son llamadas <em>handlers</em>.</p>
 <h4 id="ejemplos-de-handlers">Ejemplos de handlers<a class="anchorjs-link" href="#ejemplos-de-handlers"></a></h4><p>En el siguiente ejemplo se instala Apache HTTP Server y, si la tarea resulta exitosa, se dispara el <em>handler</em> que inicia el servicio. Si la tarea fallase, Ansible no intentará iniciar Apache HTTP Server.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>- hosts: all
@@ -303,7 +303,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>      ansible.builtin.apt:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>        upgrade: &#34;yes&#34;
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>      become: true
-</span></span></code></pre></div><h2 id="línea-de-comandos">Línea De Comandos<a class="anchorjs-link" href="#l%c3%adnea-de-comandos"></a></h2><p>Estas son algunas de las tareas más comunes de Ansible, lanzadas desde la línea de comandos.</p>
+</span></span></code></pre></div><h2 id="línea-de-comandos">Línea de Comandos<a class="anchorjs-link" href="#l%c3%adnea-de-comandos"></a></h2><p>Estas son algunas de las tareas más comunes de Ansible, lanzadas desde la línea de comandos.</p>
 <p>Comprobar que un host se encuentre en línea:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ ansible -i archivo_hots {grupo | nombre | dirección_ip} -m ping
 </span></span></code></pre></div><p>Ejecutar un comando remoto:</p>
@@ -314,9 +314,9 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ ansible-playbook -i archivo_hots archivo_yaml
 </span></span></code></pre></div><p>Utilizar los comandos remotos para actualizan los paquetes del grupo de hosts &ldquo;oficina&rdquo;:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ ansible -i ~/.ansible/hosts &#34;oficina&#34; -b -K -a &#34;apt update &amp; apt -y upgrade&#34;
-</span></span></code></pre></div><h2 id="posibilidades-de-uso">Posibilidades De Uso<a class="anchorjs-link" href="#posibilidades-de-uso"></a></h2><p>Podemos tener definido un grupo con una única máquina virtual destinada a pruebas (grupo de pruebas) y allí testear nuestro <em>playbook</em>. Haremos los ajustes necesarios y, cuando estemos conformes, cambiamos el nombre del grupo en el <em>playbook</em> (de grupo de pruebas al grupo de los servidores de producción) y volveremos a correr los procesos, esta vez sobre los equipos de producción.</p>
+</span></span></code></pre></div><h2 id="posibilidades-de-uso">Posibilidades de Uso<a class="anchorjs-link" href="#posibilidades-de-uso"></a></h2><p>Podemos tener definido un grupo con una única máquina virtual destinada a pruebas (grupo de pruebas) y allí testear nuestro <em>playbook</em>. Haremos los ajustes necesarios y, cuando estemos conformes, cambiamos el nombre del grupo en el <em>playbook</em> (de grupo de pruebas al grupo de los servidores de producción) y volveremos a correr los procesos, esta vez sobre los equipos de producción.</p>
 <h2 id="conclusión">Conclusión<a class="anchorjs-link" href="#conclusi%c3%b3n"></a></h2><p>Ansible permite automatizar tareas de administración de sistemas de forma eficiente y realizarlas en menos tiempo del que normalmente consumirían.</p>
-<h2 id="enlaces-de-utilidad">Enlaces De Utilidad<a class="anchorjs-link" href="#enlaces-de-utilidad"></a></h2><ul>
+<h2 id="enlaces-de-utilidad">Enlaces de Utilidad<a class="anchorjs-link" href="#enlaces-de-utilidad"></a></h2><ul>
 <li><a href="https://docs.ansible.com/ansible/latest/index.html" target="_blank">Documentación oficial de Ansible</a></li>
 <li><a href="https://github.com/ansible/ansible" target="_blank">Código fuente de Ansible</a></li>
 </ul>

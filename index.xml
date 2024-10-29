@@ -56,7 +56,7 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
       <pubDate>Fri, 03 Feb 2023 15:10:22 -0300</pubDate>
       
       <guid>https://mfreri.com/blog/2023-02-03-ansible/</guid>
-      <description>Supongamos que tenemos una red con diez computadores y necesitamos instalar un nuevo paquete en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
+      <description>Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
 ¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.</description>
     </item>
     

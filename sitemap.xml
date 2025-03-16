@@ -1,64 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://mfreri.com/tags/featured/</loc>
-    <lastmod>2024-09-02T16:50:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/</loc>
-    <lastmod>2024-09-02T16:50:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/</loc>
-    <lastmod>2024-09-02T16:50:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/2024-09-02-respaldos/</loc>
-    <lastmod>2024-09-02T16:50:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/sysadmin/</loc>
-    <lastmod>2024-09-02T16:50:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/</loc>
-    <lastmod>2024-09-02T16:50:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/databases/</loc>
-    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/bases-de-datos-2/</loc>
-    <lastmod>2024-02-26T12:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/2023-09-20-sysadmin/</loc>
-    <lastmod>2023-09-20T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/humor/</loc>
-    <lastmod>2023-09-20T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/tags/linux/</loc>
-    <lastmod>2023-03-22T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/2023-03-22-logs-en-linux/</loc>
-    <lastmod>2023-03-22T15:14:00-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/blog/2023-02-03-ansible/</loc>
-    <lastmod>2023-02-03T15:10:22-03:00</lastmod>
-  </url><url>
-    <loc>https://mfreri.com/about/</loc>
-  </url><url>
-    <loc>https://mfreri.com/categories/</loc>
-  </url><url>
-    <loc>https://mfreri.com/contact/</loc>
-  </url><url>
-    <loc>https://mfreri.com/dl/</loc>
-  </url><url>
-    <loc>https://mfreri.com/docs/</loc>
-  </url><url>
-    <loc>https://mfreri.com/cloud/</loc>
-  </url><url>
-    <loc>https://mfreri.com/privacy/</loc>
-  </url><url>
-    <loc>https://mfreri.com/archive/</loc>
-  </url><url>
-    <loc>https://mfreri.com/series/</loc>
-  </url><url>
-    <loc>https://mfreri.com/products/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:1313/es/sitemap.xml</loc>
+    
+      <lastmod>2024-09-02T16:50:00-03:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/en/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>

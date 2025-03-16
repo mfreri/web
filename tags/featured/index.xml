@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>featured on Marcelo Freri</title>
-    <link>https://mfreri.com/tags/featured/</link>
-    <description>Recent content in featured on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Featured on Marcelo Freri</title>
+    <link>http://localhost:1313/tags/featured/</link>
+    <description>Recent content in Featured on Marcelo Freri</description>
+    <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2025</copyright>
-    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/featured/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Respaldos</title>
-      <link>https://mfreri.com/blog/2024-09-02-respaldos/</link>
+      <link>http://localhost:1313/blog/2024-09-02-respaldos/</link>
       <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/blog/2024-09-02-respaldos/</guid>
-      <description>¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?
-En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.
-¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información.</description>
+      <guid>http://localhost:1313/blog/2024-09-02-respaldos/</guid>
+      <description>¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?&#xA;En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.&#xA;¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información.</description>
     </item>
-    
   </channel>
 </rss>

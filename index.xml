@@ -2,63 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mfreri@web on Marcelo Freri</title>
-    <link>https://mfreri.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in mfreri@web on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2025</copyright>
-    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Respaldos</title>
-      <link>https://mfreri.com/blog/2024-09-02-respaldos/</link>
+      <link>http://localhost:1313/blog/2024-09-02-respaldos/</link>
       <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/blog/2024-09-02-respaldos/</guid>
-      <description>¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?
-En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.
-¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información.</description>
+      <guid>http://localhost:1313/blog/2024-09-02-respaldos/</guid>
+      <description>¿Qué es un respaldo? Fue en noches de carnaval que escuchamos al pasar la pregunta de aquel niño: ¿qué es un respaldo, mamá?&#xA;En informática, llamamos respaldo a una copia de la totalidad o parte de los datos contenidos en uno o varios computadores. El respaldo deberá permanecer invariable, y su contenido tiene que poder ser accedido posteriormente para consulta y recuperación.&#xA;¿Para qué sirve un respaldo?Un buen respaldo debería asegurarnos la continuidad de nuestras operaciones tras sufrir algún tipo de pérdida de información.</description>
     </item>
-    
     <item>
       <title>Introducción a las Bases de Datos</title>
-      <link>https://mfreri.com/blog/bases-de-datos-2/</link>
+      <link>http://localhost:1313/blog/bases-de-datos-2/</link>
       <pubDate>Mon, 26 Feb 2024 12:00:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/blog/bases-de-datos-2/</guid>
-      <description>Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.
-¿Qué es una Base de Datos?Una base de datos es un conjunto de datos organizados y almacenados en un sistema informático, diseñado para facilitar el acceso, la gestión y la actualización de la información.</description>
+      <guid>http://localhost:1313/blog/bases-de-datos-2/</guid>
+      <description>Las bases de datos están presentes en nuestra vida cotidiana más de los que nos damos cuenta. Tu lista de contactos en el móvil, las series que sigues en tu servicio de streaming favorito, tus publicaciones en redes sociales, tus correos electrónicos y hasta tu historial de vacunación se encuentran almacenados en bases de datos.&#xA;¿Qué es una Base de Datos?Una base de datos es un conjunto de datos organizados y almacenados en un sistema informático, diseñado para facilitar el acceso, la gestión y la actualización de la información.</description>
     </item>
-    
     <item>
       <title>¿Qué es un Administrador de Sistemas?</title>
-      <link>https://mfreri.com/blog/2023-09-20-sysadmin/</link>
+      <link>http://localhost:1313/blog/2023-09-20-sysadmin/</link>
       <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/blog/2023-09-20-sysadmin/</guid>
-      <description>En los sagrados salones del reino digital, donde los servidores zumban como antiguos monolitos y los cables de red pulsan vivos de datos, se encuentra un guardián del reino digital: el administrador del sistema. Este noble caballero, vestido no con una armadura sino con los códigos y órdenes de lo arcano, ejerce poderes invisibles para el ojo del profano.
-Con sólo presionar unas teclas, podemos invocar la esencia misma del orden en el caótico torbellino del cosmos digital.</description>
+      <guid>http://localhost:1313/blog/2023-09-20-sysadmin/</guid>
+      <description>En los sagrados salones del reino digital, donde los servidores zumban como antiguos monolitos y los cables de red pulsan vivos de datos, se encuentra un guardián del reino digital: el administrador del sistema. Este noble caballero, vestido no con una armadura sino con los códigos y órdenes de lo arcano, ejerce poderes invisibles para el ojo del profano.&#xA;Con sólo presionar unas teclas, podemos invocar la esencia misma del orden en el caótico torbellino del cosmos digital.</description>
     </item>
-    
     <item>
       <title>Logs en Linux</title>
-      <link>https://mfreri.com/blog/2023-03-22-logs-en-linux/</link>
+      <link>http://localhost:1313/blog/2023-03-22-logs-en-linux/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/blog/2023-03-22-logs-en-linux/</guid>
-      <description>También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
-En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.
-EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.</description>
+      <guid>http://localhost:1313/blog/2023-03-22-logs-en-linux/</guid>
+      <description>También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.&#xA;En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.&#xA;EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.</description>
     </item>
-    
     <item>
       <title>Ansible - Primer Contacto</title>
-      <link>https://mfreri.com/blog/2023-02-03-ansible/</link>
+      <link>http://localhost:1313/blog/2023-02-03-ansible/</link>
       <pubDate>Fri, 03 Feb 2023 15:10:22 -0300</pubDate>
-      
-      <guid>https://mfreri.com/blog/2023-02-03-ansible/</guid>
-      <description>Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
-¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.</description>
+      <guid>http://localhost:1313/blog/2023-02-03-ansible/</guid>
+      <description>Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.&#xA;¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.</description>
     </item>
-    
   </channel>
 </rss>

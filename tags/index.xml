@@ -2,56 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Marcelo Freri</title>
-    <link>https://mfreri.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>es</language>
     <copyright>Copyright © Marcelo Freri 2025</copyright>
-    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>featured</title>
-      <link>https://mfreri.com/tags/featured/</link>
+      <title>Featured</title>
+      <link>http://localhost:1313/tags/featured/</link>
       <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/featured/</guid>
+      <guid>http://localhost:1313/tags/featured/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sysadmin</title>
-      <link>https://mfreri.com/tags/sysadmin/</link>
+      <title>Sysadmin</title>
+      <link>http://localhost:1313/tags/sysadmin/</link>
       <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/sysadmin/</guid>
+      <guid>http://localhost:1313/tags/sysadmin/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>databases</title>
-      <link>https://mfreri.com/tags/databases/</link>
+      <title>Databases</title>
+      <link>http://localhost:1313/tags/databases/</link>
       <pubDate>Mon, 26 Feb 2024 12:00:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/databases/</guid>
+      <guid>http://localhost:1313/tags/databases/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>humor</title>
-      <link>https://mfreri.com/tags/humor/</link>
+      <title>Humor</title>
+      <link>http://localhost:1313/tags/humor/</link>
       <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/humor/</guid>
+      <guid>http://localhost:1313/tags/humor/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
-      <link>https://mfreri.com/tags/linux/</link>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
-      
-      <guid>https://mfreri.com/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

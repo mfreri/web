@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
   <script>
@@ -32,26 +32,20 @@ En este artículo vamos a conocer los principales archivos de bitácora de un si
 EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.">
   <meta name="keywords" content='marcelo, freri, linux, servidores, redes, asesor, administrador, sistemas'>
 
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Logs en Linux">
-  <meta name="twitter:description" content="También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Logs en Linux"/>
+<meta name="twitter:description" content="También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
 En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.
-EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.">
+EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo."/>
 
-  <meta property="og:url" content="http://localhost:1313/blog/2023-03-22-logs-en-linux/">
-  <meta property="og:site_name" content="Marcelo Freri">
-  <meta property="og:title" content="Logs en Linux">
-  <meta property="og:description" content="También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
+  <meta property="og:title" content="Logs en Linux" />
+<meta property="og:description" content="También conocidos como archivos de bitácora, los logs son ficheros que registran mensajes del sistema y aplicaciones. Suelen ser de gran utilidad cuando estamos rastreando posibles errores o simplemente monitorizando el funcionamiento de nuestro servidor.
 En este artículo vamos a conocer los principales archivos de bitácora de un sistema Debian GNU/Linux 11.
-EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo.">
-  <meta property="og:locale" content="es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2023-03-22T15:14:00-03:00">
-    <meta property="article:modified_time" content="2023-03-22T15:14:00-03:00">
-    <meta property="article:tag" content="Linux">
-    <meta property="article:tag" content="Sysadmin">
+EspecificacionesLos archivos de bitácora son archivos protegidos que sólo deben ser accedidos por usuarios administradores. Por lo tanto los comandos detallados en esta guía deben ser ejecutados por el usuario root, por un usuario con permisos administrativos o mediante la herramienta sudo." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mfreri.com/blog/2023-03-22-logs-en-linux/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-03-22T15:14:00-03:00" />
+<meta property="article:modified_time" content="2023-03-22T15:14:00-03:00" />
 
   <link rel="stylesheet" href='/css/bootstrap.min.css'  crossorigin="anonymous">
 
@@ -90,7 +84,7 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost:1313/">Marcelo Freri</a>
+      <a class="navbar-brand" href="https://mfreri.com">Marcelo Freri</a>
     </div>
     
     <div id="huxblog_navbar">
@@ -200,9 +194,9 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
         <div class="post-heading">
           <div class="tags">
             
-            <a class="tag" href="/tags/linux/" title="Linux">Linux</a>
+            <a class="tag" href="/tags/linux/" title="linux">linux</a>
             
-            <a class="tag" href="/tags/sysadmin/" title="Sysadmin">Sysadmin</a>
+            <a class="tag" href="/tags/sysadmin/" title="sysadmin">sysadmin</a>
             
           </div>
           <h1>Logs en Linux</h1>
@@ -249,7 +243,7 @@ EspecificacionesLos archivos de bitácora son archivos protegidos que sólo debe
 </span></span></code></pre></div><p>El modificador <em>-r</em> es opcional y le indica al programa que muestre los mensajes en orden cronológico inverso, es decir, primero los más recientes.</p>
 <p><figure>
   <a class="paragraph-image">
-    <img data-src="http://localhost:1313/
+    <img data-src="https://mfreri.com
 /img/2023-03-22-logs-en-linux/image001.jpg" data-action="zoom" alt="Salida del comando journalctl"  class="lazyload">
   </a>
   
@@ -282,7 +276,7 @@ Ejemplo de salida del comando <em>journalctl</em>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># dmesg
 </span></span></code></pre></div><p><figure>
   <a class="paragraph-image">
-    <img data-src="http://localhost:1313/
+    <img data-src="https://mfreri.com
 /img/2023-03-22-logs-en-linux/image002.jpg" data-action="zoom" alt="Salida del comando dmesg con error"  class="lazyload">
   </a>
   
@@ -303,7 +297,7 @@ Ejemplo de una salida de <em>dmesg</em> mostrando un error de segmentación.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># last
 </span></span></code></pre></div><p><figure>
   <a class="paragraph-image">
-    <img data-src="http://localhost:1313/
+    <img data-src="https://mfreri.com
 /img/2023-03-22-logs-en-linux/image003.jpg" data-action="zoom" alt="Salida del comando last"  class="lazyload">
   </a>
   
@@ -313,11 +307,11 @@ Ejemplo de salida del comando <em>last</em>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># lastlog
 </span></span></code></pre></div><h3 id="bitácoras-en-texto-plano">Bitácoras en Texto Plano<a class="anchorjs-link" href="#bit%c3%a1coras-en-texto-plano"></a></h3><p>Para los archivos log en formato de texto plano nos valdremos de las herramientas para trabajar con texto que ya se incluyen en Linux.</p>
 <p>Para listar el contenido completo de un archivo log:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4"># cat /etc/var/cups/access_log</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># cat /etc/var/cups/access_log
 </span></span></code></pre></div><p>Para ver las primeras 10 líneas del archivo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4"># head /etc/var/cups/access_log</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># head /etc/var/cups/access_log
 </span></span></code></pre></div><p>Para ver las últimas 30 líneas de un archivo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4"># tail -30 /etc/var/cups/access_log</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># tail -30 /etc/var/cups/access_log
 </span></span></code></pre></div><p>También podemos monitorizar en tiempo real los mensajes que se van generando mientras utilizamos una aplicación, de manera similar a como lo hacíamos más arriba con <em>Journal Control</em>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># tail -f /etc/log/cups/access_log
 </span></span></code></pre></div><p>Para abandonar la vista en tiempo real, pulsamos <strong>CTRL+C</strong>.</p>
@@ -408,15 +402,15 @@ Ejemplo de salida del comando <em>last</em>.</p>
   <h5>ETIQUETAS PRINCIPALES</h5>
   <div class="tags">
     
-    <a href="/tags/databases/">Databases</a>
+    <a href="/tags/databases/">databases</a>
     
-    <a href="/tags/featured/">Featured</a>
+    <a href="/tags/featured/">featured</a>
     
-    <a href="/tags/humor/">Humor</a>
+    <a href="/tags/humor/">humor</a>
     
-    <a href="/tags/linux/">Linux</a>
+    <a href="/tags/linux/">linux</a>
     
-    <a href="/tags/sysadmin/">Sysadmin</a>
+    <a href="/tags/sysadmin/">sysadmin</a>
     
   </div>
 </section>
@@ -476,7 +470,7 @@ Ejemplo de salida del comando <em>last</em>.</p>
           <br>
           Themed by <a href="https://github.com/roninro/hugo-theme-puppet/" target="_blank">Puppet</a>
           <br>
-          <a href="http://localhost:1313//privacy/">Política de Privacidad</a>
+          <a href="https://mfreri.com/privacy/">Política de Privacidad</a>
         </p>
       </div>
     </div>
@@ -502,6 +496,19 @@ Ejemplo de salida del comando <em>last</em>.</p>
 
 
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QCZ9LYZBKV', { 'anonymize_ip': false });
+}
+</script>
 
 
 

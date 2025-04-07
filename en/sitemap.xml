@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>https://mfreri.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/categories/"
+                href="https://mfreri.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://mfreri.com/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://mfreri.com/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/"
+                href="https://mfreri.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://mfreri.com/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/series/</loc>
+    <loc>https://mfreri.com/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/series/"
+                href="https://mfreri.com/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/series/"
+                href="https://mfreri.com/en/series/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://mfreri.com/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/tags/"
+                href="https://mfreri.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://mfreri.com/en/tags/"
                 />
   </url>
 </urlset>

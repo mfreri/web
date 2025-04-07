@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
   <script>
@@ -31,23 +31,18 @@
 ¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.">
   <meta name="keywords" content='marcelo, freri, linux, servidores, redes, asesor, administrador, sistemas'>
 
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ansible - Primer Contacto">
-  <meta name="twitter:description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
-¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.">
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ansible - Primer Contacto"/>
+<meta name="twitter:description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
+¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas."/>
 
-  <meta property="og:url" content="http://localhost:1313/blog/2023-02-03-ansible/">
-  <meta property="og:site_name" content="Marcelo Freri">
-  <meta property="og:title" content="Ansible - Primer Contacto">
-  <meta property="og:description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
-¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas.">
-  <meta property="og:locale" content="es">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2023-02-03T15:10:22-03:00">
-    <meta property="article:modified_time" content="2023-02-03T15:10:22-03:00">
-    <meta property="article:tag" content="Sysadmin">
+  <meta property="og:title" content="Ansible - Primer Contacto" />
+<meta property="og:description" content="Supongamos que tenemos una red con diez computadores y necesitamos instalar o actualizar una aplicación en cada uno de ellos. Normalmente, tendríamos que acceder a cada uno de esos equipos, de forma presencial o remota, y realizar la instalación. Ahora bien, ¿y si en lugar de diez computadores fueran cien? ¿Y si fueran mil? Es aquí donde entra Ansible.
+¿Qué es Ansible?Ansible es una herramienta de automatización de tareas de mantenimiento de sistemas." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mfreri.com/blog/2023-02-03-ansible/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-03T15:10:22-03:00" />
+<meta property="article:modified_time" content="2023-02-03T15:10:22-03:00" />
 
   <link rel="stylesheet" href='/css/bootstrap.min.css'  crossorigin="anonymous">
 
@@ -86,7 +81,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost:1313/">Marcelo Freri</a>
+      <a class="navbar-brand" href="https://mfreri.com">Marcelo Freri</a>
     </div>
     
     <div id="huxblog_navbar">
@@ -196,7 +191,7 @@
         <div class="post-heading">
           <div class="tags">
             
-            <a class="tag" href="/tags/sysadmin/" title="Sysadmin">Sysadmin</a>
+            <a class="tag" href="/tags/sysadmin/" title="sysadmin">sysadmin</a>
             
           </div>
           <h1>Ansible - Primer Contacto</h1>
@@ -243,9 +238,9 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>contabilidad ansible_host=192.168.1.101
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>sueldos ansible_host=192.168.1.113
 </span></span></code></pre></div><h4 id="variables">Variables<a class="anchorjs-link" href="#variables"></a></h4><p>Soportan el uso de variables, pero estas deben ser definidas en un subgrupo. En este ejemplo, las variables sólo aplicarán para el grupo <em>samba</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[samba:vars]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ansible_user<span style="color:#ff79c6">=</span>mi_usuario
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ansible_password<span style="color:#ff79c6">=</span>mi_clave_segura
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[samba:vars]
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ansible_user=mi_usuario
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ansible_password=mi_clave_segura
 </span></span></code></pre></div><h3 id="playbooks">Playbooks<a class="anchorjs-link" href="#playbooks"></a></h3><p>Son archivos en formato <em>YAML</em> y contienen la lista de tareas a realizar en los hosts.</p>
 <h4 id="formato-básico">Formato Básico<a class="anchorjs-link" href="#formato-b%c3%a1sico"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>---
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>- name: Descripción corta de las tareas
@@ -260,10 +255,10 @@
 </span></span></code></pre></div><h4 id="comentarios">Comentarios<a class="anchorjs-link" href="#comentarios"></a></h4><p>Los comentarios se realizan anteponiendo un <code>#</code> al texto comentado.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span># Esto es un comentario
 </span></span></code></pre></div><h4 id="variables-1">Variables<a class="anchorjs-link" href="#variables-1"></a></h4><p>Al igual que los inventarios, los <em>playbooks</em> soportan el uso de variables. Estas se definen utilizando el método <em>vars</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vars:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vars:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  nombre_variable: valor
 </span></span></code></pre></div><p>Para acceder al contenido de una variable se utiliza su nombre entre dobles llaves.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ nombre_variable }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{ nombre_variable }}
 </span></span></code></pre></div><h4 id="ejemplo-de-playbook">Ejemplo de playbook<a class="anchorjs-link" href="#ejemplo-de-playbook"></a></h4><p>Actualizar los repositorios del grupo &ldquo;Oficina&rdquo;:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>---
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>- name: Actualizar
@@ -369,15 +364,15 @@
   <h5>ETIQUETAS PRINCIPALES</h5>
   <div class="tags">
     
-    <a href="/tags/databases/">Databases</a>
+    <a href="/tags/databases/">databases</a>
     
-    <a href="/tags/featured/">Featured</a>
+    <a href="/tags/featured/">featured</a>
     
-    <a href="/tags/humor/">Humor</a>
+    <a href="/tags/humor/">humor</a>
     
-    <a href="/tags/linux/">Linux</a>
+    <a href="/tags/linux/">linux</a>
     
-    <a href="/tags/sysadmin/">Sysadmin</a>
+    <a href="/tags/sysadmin/">sysadmin</a>
     
   </div>
 </section>
@@ -437,7 +432,7 @@
           <br>
           Themed by <a href="https://github.com/roninro/hugo-theme-puppet/" target="_blank">Puppet</a>
           <br>
-          <a href="http://localhost:1313//privacy/">Política de Privacidad</a>
+          <a href="https://mfreri.com/privacy/">Política de Privacidad</a>
         </p>
       </div>
     </div>
@@ -463,6 +458,19 @@
 
 
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZ9LYZBKV"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QCZ9LYZBKV', { 'anonymize_ip': false });
+}
+</script>
 
 
 

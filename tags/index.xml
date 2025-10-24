@@ -4,53 +4,45 @@
     <title>Tags on Marcelo Freri</title>
     <link>https://mfreri.com/tags/</link>
     <description>Recent content in Tags on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
+    <language>es</language>
     <copyright>Copyright © Marcelo Freri 2025</copyright>
-    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate><atom:link href="https://mfreri.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 16:50:00 -0300</lastBuildDate>
+    <atom:link href="https://mfreri.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>featured</title>
+      <title>Featured</title>
       <link>https://mfreri.com/tags/featured/</link>
       <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
-      
       <guid>https://mfreri.com/tags/featured/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sysadmin</title>
+      <title>Sysadmin</title>
       <link>https://mfreri.com/tags/sysadmin/</link>
       <pubDate>Mon, 02 Sep 2024 16:50:00 -0300</pubDate>
-      
       <guid>https://mfreri.com/tags/sysadmin/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>databases</title>
+      <title>Databases</title>
       <link>https://mfreri.com/tags/databases/</link>
       <pubDate>Mon, 26 Feb 2024 12:00:00 -0300</pubDate>
-      
       <guid>https://mfreri.com/tags/databases/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>humor</title>
+      <title>Humor</title>
       <link>https://mfreri.com/tags/humor/</link>
       <pubDate>Wed, 20 Sep 2023 15:14:00 -0300</pubDate>
-      
       <guid>https://mfreri.com/tags/humor/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://mfreri.com/tags/linux/</link>
       <pubDate>Wed, 22 Mar 2023 15:14:00 -0300</pubDate>
-      
       <guid>https://mfreri.com/tags/linux/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

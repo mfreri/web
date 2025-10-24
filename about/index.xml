@@ -4,7 +4,9 @@
     <title>Acerca de mí on Marcelo Freri</title>
     <link>https://mfreri.com/about/</link>
     <description>Recent content in Acerca de mí on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © Marcelo Freri 2025</copyright><atom:link href="https://mfreri.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyright © Marcelo Freri 2025</copyright>
+    <atom:link href="https://mfreri.com/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

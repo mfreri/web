@@ -4,7 +4,9 @@
     <title>Descargas on Marcelo Freri</title>
     <link>https://mfreri.com/dl/</link>
     <description>Recent content in Descargas on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © Marcelo Freri 2025</copyright><atom:link href="https://mfreri.com/dl/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyright © Marcelo Freri 2025</copyright>
+    <atom:link href="https://mfreri.com/dl/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -4,7 +4,9 @@
     <title>Publicaciones on Marcelo Freri</title>
     <link>https://mfreri.com/archive/</link>
     <description>Recent content in Publicaciones on Marcelo Freri</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © Marcelo Freri 2025</copyright><atom:link href="https://mfreri.com/archive/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>es</language>
+    <copyright>Copyright © Marcelo Freri 2025</copyright>
+    <atom:link href="https://mfreri.com/archive/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
